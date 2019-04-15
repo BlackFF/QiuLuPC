@@ -1,0 +1,126 @@
+.privilege_img img {
+	display: block;
+}
+
+.privilege_top {
+	height: 70px;
+	line-height: 70px;
+}
+.privilege_top .f_left {
+	font-size: 23px;
+	color: #666;
+	font-weight: 600;
+	margin-left: 20px;
+}
+.privilege_top .f_right {
+	font-size: 23px;
+	color: #666;
+	font-weight: 600;
+	margin-right: 110px;
+}
+
+.privilege_left {
+	width: 970px;
+	float: left;
+}
+.privilege_left li {
+	width: 970px;
+	height: 270px;
+	background: #fff;
+	margin-bottom:15px ;
+	color: #333;
+}
+.privilege_left li:hover {
+	animation: myani 1.5s ease 1 alternate 0s both;
+}
+.privilege_left li figure > img {
+	float: right;
+}
+.privilege_left li figure figcaption {
+	text-align: center;
+	float: left;
+	height: 270px;
+	width:270px ;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+.privilege_left_img {
+	margin-top: 20px;
+}
+.privilege_left_p1 {
+	padding: 15px 0 30px;
+	border-bottom: 1px dashed #ddd;
+}
+.privilege_left_p2 {
+	font-size: 20px;
+	color: #333;
+	margin-top: 10px;
+}
+.privilege_left_p2 span {
+	font-size:40px;
+	font-weight: 600;
+	color: #FF9C00;
+}
+.privilege_left_p3 {
+	margin-top: 10px;
+}
+.privilege_clock {
+	width:13px;
+	height: 13px;
+	display: inline-block;
+	background:url(../images/icons.png)  -54px -90px  no-repeat;
+	background-size:250px 250px ;
+}
+
+.privilege_right {
+	float: right;
+	width: 210px;
+}
+.privilege_right li {
+	width: 210px;
+	height: 250px;
+	background:#fff;
+	padding: 10px;
+	box-sizing: border-box;
+	color: #333;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.privilege_right li:hover {
+	animation: myani 1.5s ease 1 alternate 0s both;
+}
+.privilege_right li figure img {
+	width: 160px;
+	height: 160px;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+.privilege_right li figure figcaption {
+	position: absolute;
+	bottom:0;
+	height: 60px;
+}
+.privilege_right li figure figcaption span {
+	width: 190px;
+	color:#333 ;
+	display: block;
+	 white-space: nowrap;
+	 text-overflow:ellipsis;
+	  overflow:hidden;
+}
+.privilege_right li figure figcaption span:hover {
+	color:#A12C7F;
+}
+.privilege_m1 {
+	float: left;
+	margin-top: 10px;
+	font-weight: 600;
+	color: #A12C7F;
+}
+.privilege_m2 {
+	float: right;
+	margin-top: 10px;
+	color: #999;
+	text-decoration: line-through;
+}

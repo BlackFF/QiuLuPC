@@ -1,0 +1,129 @@
+
+.nav_right {
+	padding:15px 5px 40px 5px;
+}
+.l_control {
+	margin: 0 0 10px 37px;
+	font-size: 12px;
+	color: #333;
+}
+.user_name {
+	margin: 0 37px 10px 0;
+	font-size: 12px;
+	color: red;
+	font-weight: 600;
+}
+.r_control {
+	margin: 0 37px 10px 0;
+	font-size: 14px;
+}
+.r_password {
+	margin: 0 37px 10px 0;
+	font-size: 12px;
+	color: red;
+	font-weight: 600;
+}
+.r_control_pwd {
+	margin: 0 37px 10px 0;
+	font-size: 12px;
+	color: red;
+	font-weight: 600;
+	
+}
+.user_submit input {
+	width: 300px;
+	height: 50px;
+	background-color: #F19107;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.user_mfzc {
+	margin-top: 20px;
+}
+.auth_code {
+	margin-bottom: 10px;
+	float: left;
+}
+.auth_code input {
+	width: 126px;
+	height: 40px;
+	float: left;
+	margin-left: 35px;
+	border:1px solid #9D003F ;
+	box-shadow:0 0 2px 0 #9D003F;
+}
+.auth_code img {
+	float: left;
+	margin: 3px 0 0 15px;
+	width:70px;
+	height:35px;
+}
+.auth_code_t {
+	margin-bottom: 10px;
+	float: left;
+}
+
+.auth_code_input input {
+	width: 126px;
+	height: 40px;
+	float: left;
+	margin-left: 35px;
+	border:1px solid #E93B39 ;
+}
+.auth_code_button input {
+	float: left;
+	width: 104px;
+	height: 24px;
+	font-size: 12px;
+	background: #efefef;
+	margin: 9px 0 0 16px;
+	cursor: pointer;
+}
+.telephcode {
+	display:inline-block;
+	margin:6px 5px 0 10px;
+	width:72px;
+	height:30px;
+	line-height:30px;
+	text-align: center;
+	background:#666;
+	color:#fff;
+}
+.layer_box {
+    width: 790px;
+    height: 486px;
+    background: url(/images/layer_bg.png);
+    padding: 8px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -243px 0 0 -385px;
+    z-index: 999;
+}
+.layer_cont {
+    height: 484px;
+    background: #fff;
+    padding-top: 3px;
+}
+.layer_t {
+    margin: 0 3px;
+    height: 44px;
+    line-height: 44px;
+    background: #f5f5f5;
+    color: #020202;
+    font-size: 18px;
+    font-family: Microsoft Yahei;
+    text-align: center;
+    position: relative;
+}
+.layer_t .layer_close{ background:url(/QiuLuPC/images/layer_close.png) no-repeat; width:20px; height:20px; display:block; position:absolute; right:10px; top:12px;}
+.layer_detail{ padding:20px 10px 20px 25px; height:280px; overflow:auto;}
+.layer_detail p{ font-size:12px; color:#666666; line-height:22px; font-family:"宋体"; margin:0;}
+.layer_detail p strong{ color:#333; line-height:24px;}
+
+.layer_btn{ text-align:center;}
+.layer_btn a,.layer_btn a:hover{ width:248px; height:38px; line-height:38px; text-align:center; background:#020202; color:#fff; font-size:16px; font-family:Microsoft Yahei; display:inline-block; margin:0px auto; text-decoration:none;}

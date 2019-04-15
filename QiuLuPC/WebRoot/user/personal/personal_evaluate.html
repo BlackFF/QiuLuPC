@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>商品评价</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+			<link href="../../css/common.css" type="text/css" rel="stylesheet"/>
+			<link href="../../css/upload.css" type="text/css" rel="stylesheet"/>
+			<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+			<link rel="stylesheet" type="text/css" href="../../css/index.css" />
+			<link rel="stylesheet" type="text/css" href="../../css/user/personal.css" />
+			<link rel="stylesheet" type="text/css" href="../../css/starability-all.min.css" />
+			<link rel="stylesheet" type="text/css" href="../../css/animate.css" />
+			<link rel="stylesheet" type="text/css" href="../../css/flavr.css" />
+			<script type="text/javascript" src="../../js/jquery.min.js"></script>
+			<script type="text/javascript" src="../../js/flavr.min.js"></script>
+			<script type="text/javascript" src="../../js/user/personal/images_path.js"></script>
+			<script type="text/javascript" src="../../js/user/personal/personal_evaluate.js"></script>
+			<script type="text/javascript" src="../../js/base.js"></script>
+			<script type="text/javascript" src="../../js/fm.validator.js" ></script>
+			<script type="text/javascript" src="../../js/jquery-form.js" ></script>
+			<script src="../../js/imgUp.js"></script>
+	<body>
+		<!--头部-->
+		<header class="range">
+			<h1>个人中心</h1>
+			<div class="logo">
+				<img src="../../images/logo.png"/>
+			</div>
+			<ul class="list">
+				<li>欢迎光临秋露商城</li>
+				<li><a href="###" >请登录</a></li>
+				<li><a href="../../register.html" >免费注册</a></li>
+				<li><a href="personal_indent.html" >我的订单</a></li>
+				<li><a href="###" >服务中心</a></li>
+				<li><a href="../cart.html" ><!--<img src="images/shoppingcart.png">-->购物车(0)</a></li>
+			</ul>
+			
+			<div class="search">
+				<form onsubmit="return false;">
+					<input id="search" type="text" placeholder="    空气净化器">
+					<button type="button" onclick="getSellPoint()">搜索</button>
+				</form>
+				<ul>
+					<li><a href="###">黑加仑葡萄干</a></li>
+					<li><a href="###">倍净空气净化器</a></li>
+					<li><a href="###">卓霏护肤系列</a></li>
+					<li><a href="###">睿康营养液</a></li>
+					<li><a href="###">真丝羽绒被</a></li>
+				</ul>
+			</div>
+			
+			<div class="header_nav">
+				<p>全部商品</p>
+				<ul>
+					<a href="../../index.html"><li>首页</li></a>
+					<a href="../../onnew.html"><li>上新</li></a>
+					<a href="###"><li>品牌</li></a>
+					<a href="../../privilege.html"><li>活动</li></a>
+					<a href="###"><li>会员专区</li></a>
+					<a href="###"><li>创客</li></a>
+					<a href="###"><li>关于我们</li></a>
+				</ul>
+			</div>
+		</header>
+		
+		<div class="layout">    <!--背景颜色-->
+			<div class="wrap range">
+				<div id="menu">
+					<ul>
+						<a href="../personal/personal.html"><div id="m1"class="my_qiulu"><dd>我的秋露</dd></div></a>
+					<p>我是买家</p>
+					<a href="personal_indent.html"><li id="m2"><dt><i class="circle"></i>我的订单</dt></li></a>
+					<a href="../personal/personal_collect.html"><li id="m3"><dt><i class="circle"></i>我的收藏</dt></li></a>
+					<li id="m4" class="menu_on"><dt><i class="circle_on"></i>商品评价</dt></li>
+					<a href="personal_service.html" ><li id="m5"><dt><i class="circle"></i>我的售后</dt></li></a>
+					
+					<p>账号中心</p>
+					<a href="../personal/personal_information.html"><li id="m6" ><dt><i class="circle"></i>账号信息</dt></li></a>
+					<a href="../personal/personal_security.html"><li id="m7"><dt><i class="circle"></i>账号安全</dt></li></a>
+					<a href="../personal/personal_address.html"><li id="m8" class="menu"><dt><i class="circle"></i>收货地址</dt></li></a>
+					</ul>
+				</div>
+				
+						
+					<!--商品评价-->
+					<div id="content">
+						
+					</div>
+		<!--清理浮动-->
+				<div class="clearfix"></div>	
+			<!--底部-->
+		<footer>
+				<div class="footer_top">
+						<ol>
+							<h4>新手指南</h4>
+							<li><a href="###">注册新用户</a></li>
+							<li><a href="###">网上订购流程</a></li>
+							<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>付款方式</h4>
+							<li><a href="###">在线支付</a></li>
+							<!--<li>网上订购流程</li>
+							<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>物流配送</h4>
+							<li><a href="###">快递配送</a></li>
+							<li><a href="###">到店自提</a></li>
+							<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>售后服务</h4>
+							<li><a href="###">退货说明</a></li>
+							<li><a href="###">如何办理退款</a></li>
+							<li><a href="###">售后服务保养手册</a></li>
+							<!--<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+				</div>
+				<!--清理浮动-->
+				<div class="clearfix"></div>	
+			
+				<div class="footer_center">
+					<ol class="range">
+						<li>
+							<figure>
+								<img src="../../images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="../../images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="../../images/footer2.png">
+								<figcaption>100%保证真品证</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="../../images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="../../images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+					</ol>
+				</div>
+				
+				<!--清理浮动-->
+				<div class="clearfix"></div>	
+				
+				<div class="footer_bottom range">
+					<ol>
+						<li>
+							<a href="###">秋露网</a>
+						</li>
+						<li>
+							<a href="###">秋露招商</a>
+						</li>
+					</ol>
+					<!--清理浮动-->
+				<div class="clearfix"></div>	
+					<ol>
+						<li>
+							统一社会信用代码：91110102689248179K
+						</li>
+						<li>
+							<a href="###">
+								<figure>
+									<img src="../../images/footerbottom.jpg">
+									<figcaption>京公安备11010102001392</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li>
+							京ICP证110119号 京ICP备09084709号-3
+						</li>
+						<li>
+							ISO9001中国质量管理体系认证
+						</li>
+					</ol>
+					<!--清理浮动-->
+					<div class="clearfix"></div>
+					<ol>
+						<li><a href="###">加入秋露</a></li>
+						<li><a href="###">联系我们</a></li>
+						<li><a href="###">关于我们</a></li>
+						<li><a href="###">帮助我们</a></li>
+						<li><a href="###">友情链接</a></li>
+					</ol>
+					<!--清理浮动-->
+					<div class="clearfix"></div>
+					<ol>
+						<li>COPYRIGHT © 2010-2016 秋露贸易有限公司 版权所有</li>
+					</ol>
+				<p>
+				<figure class="footer_code">
+				<img src="../../images/code.png">
+				<figcaption>扫描进入秋露微信商城</figcaption>
+				</figure>
+				</p>
+				</div>
+				
+		</footer>
+		
+	</body>
+</html>
+
+

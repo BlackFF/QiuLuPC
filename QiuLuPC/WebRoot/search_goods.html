@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>分类列表</title>
+<link rel="stylesheet" type="text/css" href="css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/classification.css" />
+<link rel="stylesheet" type="text/css" href="css/animate.css" />
+<link rel="stylesheet" type="text/css" href="css/flavr.css" />
+</head>
+<body>
+	<!--头部-->
+	<header class="range">
+		<h1>分类列表</h1>
+		<div class="logo">
+			<img src="images/logo.png" />
+		</div>
+		<ul class="list">
+			<li>欢迎光临秋露商城</li>
+			<li><a href="###">请登录</a></li>
+			<li><a href="###">免费注册</a></li>
+			<li><a href="###">我的订单</a></li>
+			<li><a href="###">服务中心</a></li>
+			<li><a href="###">
+					<!--<img src="images/shoppingcart.png">-->购物车(0)
+			</a></li>
+		</ul>
+
+		<div class="search">
+			<form>
+				<input type="text" id="search" placeholder="    空气净化器">
+				<button id="subButton" type="button" onclick="getSellPoint()">搜索</button>
+			</form>
+			<ul>
+				<li><a href="###">黑加仑葡萄干</a></li>
+				<li><a href="###">倍净空气净化器</a></li>
+				<li><a href="###">卓霏护肤系列</a></li>
+				<li><a href="###">睿康营养液</a></li>
+				<li><a href="###">真丝羽绒被</a></li>
+			</ul>
+		</div>
+		<div class="header_nav">
+			<p>全部商品</p>
+			<ul>
+				<a href="index.html"><li>首页</li></a>
+				<a href="###"><li>上新</li></a>
+				<a href="###"><li>品牌</li></a>
+				<a href="privilege.html"><li>活动</li></a>
+				<a href="###"><li>会员专区</li></a>
+				<a href="###"><li>创客</li></a>
+				<a href="###"><li>关于我们</li></a>
+			</ul>
+		</div>
+	</header>
+
+
+	<div class="layout">
+		<!--背景色-->
+		<div class="main range">
+			<div class="main_top ">
+				<div class="list_title">
+					<a href="###"><span>全部<i class="ico_right"></i></span></a> <a
+						href="###"> <span class="list_title_drop">床上用品<i
+							class="ico_bottom ico_top"></i></span>
+					</a>
+					<ul class="list_title_open">
+						<a href="###"><li>美酒影视嫉妒</li></a>
+						<a href="###"><li>美酒影视嫉妒积极</li></a>
+						<a href="###"><li>美酒影视嫉</li></a>
+						<a href="###"><li>美酒影视嫉妒积极</li></a>
+						<a href="###"><li>美酒影视嫉妒</li></a>
+						<a href="###"><li>美酒影</li></a>
+						<a href="###"><li>美酒影</li></a>
+						<a href="###"><li>美酒影视嫉妒</li></a>
+						<a href="###"><li>美酒影视嫉妒积极</li></a>
+						<a href="###"><li>美酒影视嫉</li></a>
+						<a href="###"><li>美酒影视嫉妒积极</li></a>
+						<a href="###"><li>美酒影视嫉妒</li></a>
+						<a href="###"><li>美酒影</li></a>
+						<a href="###"><li>美酒影</li></a>
+					</ul>
+
+				</div>
+
+
+			</div>
+			<!--清理浮动-->
+			<div class="clearfix"></div>
+			<!-- <div class="main_bottom range">
+				<ul class="main_choose">
+					<li>
+						<dd>品牌：</dd>
+						<dt>
+							<ol class="class_brand">
+								<a href="###"><li></li></a>
+								<a href="###"><li></li></a>
+								<a href="###"><li></li></a>
+								<a href="###"><li></li></a>
+							</ol>
+						</dt>
+					</li>
+					<li>
+						<dd>分类：</dd>
+						<dt>
+							<div class="assortment">
+								<a href="###">单肩包<span>（200）</span></a> <a href="###">单肩包<span>（200）</span></a>
+								<a href="###">单肩包<span>（200）</span></a> <a href="###">单肩包<span>（200）</span></a>
+								<a href="###">单肩包<span>（200）</span></a> <a href="###">单肩包<span>（200）</span></a>
+								<a href="###">单肩包<span>（200）</span></a> <a href="###">单肩包<span>（200）</span></a>
+								<a href="###">单肩包<span>（200）</span></a> <a href="###">单肩包<span>（200）</span></a>
+								<a href="###">单肩包<span>（200）</span></a> <a href="###">单肩包<span>（200）</span></a>
+								<a href="###">单肩包<span>（200）</span></a> <a href="###">单肩包<span>（200）</span></a>
+
+							</div>
+						</dt>
+					</li>
+					<li>
+					<dd>价格：</dd>
+					<dt>
+						<div class="assortment">
+							<a href="###">100以下</a>
+							<a href="###">101-200</a>
+							<a href="###">201-500</a>
+							<a href="###">501-1000</a>
+							<a href="###">1001-5000</a>
+							<a href="###">5001-10000</a>
+							<a href="###">100001-50000</a>
+						</div>
+					</dt>
+				</li>
+					<li>
+					<dd>适用人群：</dd>
+					<dt>
+						<div class="assortment">
+							<a href="###">男士</a>
+							<a href="###">女士</a>
+							<a href="###">中性</a>
+						</div>
+					</dt>
+				</li>
+				</ul>
+			</div> -->
+		</div>
+	</div>
+
+	<!--所有商品-->
+	<div class="layout">
+		<!--背景色-->
+		<div class="main range">
+			<section class="class_good">
+				<h1 id="goodNum">商品</h1>
+				<div class="good_choose">
+					<div class="good_choose_a">
+						<a href="###">综合<i class="arrows_black"></i></a> 
+						
+						   <a href="###" id="Favorite">人气<i
+							class="arrows_black"></i></a> <a href="###">新品<i
+							class="arrows_black"></i></a> <a href="###">销量<i
+							class="arrows_black"></i></a> <a href="###">折扣<i
+							class="arrows_black"></i></a> <a href="###">价格<i
+							class="arrows_black"></i></a>
+					</div>
+					<form>
+						<div class="price">
+							<input type="text" id="startPrice" placeholder="￥" />--<input type="text" id="endPrice"
+								placeholder="￥" />
+						</div>
+						<div class="choice">
+							<input type="checkbox"><span> 新到商品</span> <input
+								type="checkbox"><span> 促销商品</span>
+							<!-- <input type="checkbox"><span>	闪购</span>
+							<input type="checkbox"><span>	海外直购</span> -->
+						</div>
+						<div class="good_search">
+							<!-- <input type="text" placeholder="在结果中搜索"  class="search_text"/> -->
+							<input type="submit" name="Submit" value="确定"
+								class="search_submit" />
+						</div>
+						<!-- <div class="paging">
+							<a href="###" class="paging_last"><i class="last"></i></a><span class="paging_red">1</span>/600<a href="###" class="paging_next"><i class="next"></i></a>
+						</div> -->
+					</form>
+				</div>
+			</section>
+			<!--具体商品-->
+			<ul class="products">
+				<li>
+					<figure>
+						<a href="###"><img src="images/products1.png"></a>
+						<figcaption>
+							<a href="###"> <span class="description"> 死了记得付款了时间到了
+							</span>
+							</a> <span class="products_prices"> ￥799 </span> <span
+								class="products_sales"> 销量：55件 </span>
+							<!--清理浮动-->
+							<div class="clearfix"></div>
+							<div class="products_box">
+								<div class="products_drop">
+									<a href="###"><span class="products_cart">加入购物车</span></a> <span>仅剩3件</span>
+									<span class="collection"><i></i>收藏</span>
+								</div>
+							</div>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<a href="###"><img src="images/products1.png"></a>
+						<figcaption>
+							<a href="###"> <span class="description"> 死了记得付款了时间到了
+							</span>
+							</a> <span class="products_prices"> ￥799 </span> <span
+								class="products_sales"> 销量：55件 </span>
+							<!--清理浮动-->
+							<div class="clearfix"></div>
+							<div class="products_box">
+								<div class="products_drop">
+									<a href="###"><span class="products_cart">加入购物车</span></a> <span>仅剩3件</span>
+									<span class="collection"><i></i>收藏</span>
+								</div>
+							</div>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<a href="###"><img src="images/products1.png"></a>
+						<figcaption>
+							<a href="###"> <span class="description"> 死了记得付款了时间到了
+							</span>
+							</a> <span class="products_prices"> ￥799 </span> <span
+								class="products_sales"> 销量：55件 </span>
+							<!--清理浮动-->
+							<div class="clearfix"></div>
+							<div class="products_box">
+								<div class="products_drop">
+									<a href="###"><span class="products_cart">加入购物车</span></a> <span>仅剩3件</span>
+									<span class="collection"><i></i>收藏</span>
+								</div>
+							</div>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<a href="###"><img src="images/products1.png"></a>
+						<figcaption>
+							<a href="###"> <span class="description"> 死了记得付款了时间到了
+							</span>
+							</a> <span class="products_prices"> ￥799 </span> <span
+								class="products_sales"> 销量：55件 </span>
+							<!--清理浮动-->
+							<div class="clearfix"></div>
+							<div class="products_box">
+								<div class="products_drop">
+									<a href="###"><span class="products_cart">加入购物车</span></a> <span>仅剩3件</span>
+									<span class="collection"><i></i>收藏</span>
+								</div>
+							</div>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<a href="###"><img src="images/products1.png"></a>
+						<figcaption>
+							<a href="###"> <span class="description"> 死了记得付款了时间到了
+							</span>
+							</a> <span class="products_prices"> ￥799 </span> <span
+								class="products_sales"> 销量：55件 </span>
+							<!--清理浮动-->
+							<div class="clearfix"></div>
+							<div class="products_box">
+								<div class="products_drop">
+									<a href="###"><span class="products_cart">加入购物车</span></a> <span>仅剩3件</span>
+									<span class="collection"><i></i>收藏</span>
+								</div>
+							</div>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<a href="###"><img src="images/products1.png"></a>
+						<figcaption>
+							<a href="###"> <span class="description"> 死了记得付款了时间到了
+							</span>
+							</a> <span class="products_prices"> ￥799 </span> <span
+								class="products_sales"> 销量：55件 </span>
+							<!--清理浮动-->
+							<div class="clearfix"></div>
+							<div class="products_box">
+								<div class="products_drop">
+									<a href="###"><span class="products_cart">加入购物车</span></a> <span>仅剩3件</span>
+									<a href="###"><span class="collection"><i></i>收藏</span></a>
+								</div>
+							</div>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+
+			<!-- <div class="paging_down">
+			<form>
+			<a href="###">上一页</a>
+			<a href="###">1</a>
+			<a href="###">2</a>
+			<a href="###">3</a>
+			<span>...</span>
+			<a href="###">14</a>
+			<a href="###">下一页</a>
+			共14页,到第<input type="text" class="paging_down_text" />页
+			<input type="submit" name="Submit" value="确定" class="paging_down_submit"/>
+			</form>
+		</div>
+		 -->
+			<!--没有合适的商品-->
+			<div class="without_goods">
+				<p class="without_col">很抱歉，没有找到合适的商品</p>
+				<p>建议您：</p>
+				<p>1、适当减少筛选条件，可以获得更多的结果</p>
+				<p>2、变更商品品牌</p>
+				<p>3、调整价格区间</p>
+				<a href="index.html"><p class="without_button">返回首页</p></a>
+			</div>
+
+
+			<!--最近浏览-->
+			<div class="browse">
+				<a href="###" class="top_two"> 最近浏览 </a> <a href="###"> 畅销排行榜 </a>
+				<ul class="browse_good" id="recentlyViewed">
+					<li>
+						<figure>
+							<a href="###"><img src="images/browse.png"></a>
+							<figcaption>
+								<a href="###" class="underline"> <span class="character">
+										死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了
+								</span>
+								</a> <span class="products_prices"> ￥799 </span>
+
+							</figcaption>
+						</figure>
+					</li>
+
+					<li>
+						<figure>
+							<a href="###"><img src="images/browse.png"></a>
+							<figcaption>
+								<a href="###" class="underline"> <span class="character">
+										死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了
+								</span>
+								</a> <span class="products_prices"> ￥799 </span>
+
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<a href="###"><img src="images/browse.png"></a>
+							<figcaption>
+								<a href="###" class="underline"> <span class="character">
+										死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了
+								</span>
+								</a> <span class="products_prices"> ￥799 </span>
+
+							</figcaption>
+						</figure>
+					</li>
+
+					<li>
+						<figure>
+							<a href="###"><img src="images/browse.png"></a>
+							<figcaption>
+								<a href="###" class="underline"> <span class="character">
+										死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了
+								</span>
+								</a> <span class="products_prices"> ￥799 </span>
+
+							</figcaption>
+						</figure>
+					</li>
+
+				</ul>
+				<ul class="browse_good none">
+					<li>
+						<figure>
+							<a href="###"><img src="images/browse.png"></a>
+							<figcaption>
+								<a href="###" class="underline"> <span class="character">
+										死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了
+								</span>
+								</a> <span class="products_prices"> ￥799 </span>
+
+							</figcaption>
+						</figure>
+					</li>
+
+					<li>
+						<figure>
+							<a href="###"><img src="images/browse.png"></a>
+							<figcaption>
+								<a href="###" class="underline"> <span class="character">
+										死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了死了记得付款了时间到了
+								</span>
+								</a> <span class="products_prices"> ￥799 </span>
+
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+         <div class="fixtop">
+			<a href="javascript:void(0)" onclick="goTop()"><img src="images/fixtop.png"></a>
+		 </div>
+
+	</div>
+
+
+
+
+
+	<!--清理浮动-->
+	<div class="clearfix"></div>
+	<!--底部-->
+	<footer>
+		<div class="footer_top">
+			<ol>
+				<h4>新手指南</h4>
+				<li><a href="###">注册新用户</a></li>
+				<li><a href="###">网上订购流程</a></li>
+				<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+			</ol>
+			<ol>
+				<h4>付款方式</h4>
+				<li><a href="###">在线支付</a></li>
+				<!--<li>网上订购流程</li>
+							<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+			</ol>
+			<ol>
+				<h4>物流配送</h4>
+				<li><a href="###">快递配送</a></li>
+				<li><a href="###">到店自提</a></li>
+				<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+			</ol>
+			<ol>
+				<h4>售后服务</h4>
+				<li><a href="###">退货说明</a></li>
+				<li><a href="###">如何办理退款</a></li>
+				<li><a href="###">售后服务保养手册</a></li>
+				<!--<li>注册新用户</li>
+							<li>注册新用户</li>-->
+			</ol>
+		</div>
+		<!--清理浮动-->
+		<div class="clearfix"></div>
+
+		<div class="footer_center">
+			<ol class="range">
+				<li>
+					<figure>
+						<img src="images/footer2.png">
+						<figcaption>100%保证真品</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/footer2.png">
+						<figcaption>100%保证真品</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/footer2.png">
+						<figcaption>100%保证真品证</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/footer2.png">
+						<figcaption>100%保证真品</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="images/footer2.png">
+						<figcaption>100%保证真品</figcaption>
+					</figure>
+				</li>
+			</ol>
+		</div>
+
+		<!--清理浮动-->
+		<div class="clearfix"></div>
+
+		<div class="footer_bottom range">
+			<ol>
+				<li><a href="###">秋露网</a></li>
+				<li><a href="###">秋露招商</a></li>
+			</ol>
+			<!--清理浮动-->
+			<div class="clearfix"></div>
+			<ol>
+				<li>统一社会信用代码：91110102689248179K</li>
+				<li><a href="###">
+						<figure>
+							<img src="images/footerbottom.jpg">
+							<figcaption>京公安备11010102001392</figcaption>
+						</figure>
+				</a></li>
+				<li>京ICP证110119号 京ICP备09084709号-3</li>
+				<li>ISO9001中国质量管理体系认证</li>
+			</ol>
+			<!--清理浮动-->
+			<div class="clearfix"></div>
+			<ol>
+				<li><a href="###">加入秋露</a></li>
+				<li><a href="###">联系我们</a></li>
+				<li><a href="###">关于我们</a></li>
+				<li><a href="###">帮助我们</a></li>
+				<li><a href="###">友情链接</a></li>
+			</ol>
+			<!--清理浮动-->
+			<div class="clearfix"></div>
+			<ol>
+				<li>COPYRIGHT © 2010-2016 秋露贸易有限公司 版权所有</li>
+			</ol>
+			<p>
+			<figure class="footer_code">
+				<img src="images/code.png">
+				<figcaption>扫描进入秋露微信商城</figcaption>
+			</figure>
+			</p>
+		</div>
+
+	</footer>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/flavr.min.js"></script>
+	<script type="text/javascript" src="js/user/personal/images_path.js"></script>
+<!-- 	<script type="text/javascript" src="js/goods_details.js"></script> -->
+	<script type="text/javascript" src="js/search_goods.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/classification.style.js"></script>
+</body>
+</html>

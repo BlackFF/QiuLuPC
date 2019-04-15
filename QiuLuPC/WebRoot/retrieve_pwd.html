@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>秋露商城</title>
+		<meta	content="width=device-width, minimum-scale=1.0,initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"
+			id="viewport" name="viewport" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+			<link rel="stylesheet" type="text/css" href="css/base.css" />
+			<link rel="stylesheet" type="text/css" href="css/index.css" />
+			<link rel="stylesheet" type="text/css" href="css/retrieve_pwd.css" />
+			<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+			<script type="text/javascript" src="js/md5.js"></script>
+			<script type="text/javascript" src="js/retrieve_pwd.js"></script>
+			<script type="text/javascript" src="js/base.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<header class="range">
+			<h1>秋露商城</h1>
+			<div class="logo">
+				<img src="images/logo.png"/>
+			</div>
+			<ul class="list">
+				<li>欢迎光临秋露商城</li>
+				<li><a href="###" >请登录</a></li>
+				<li><a href="###" >免费注册</a></li>
+				<li><a href="###" >我的订单</a></li>
+				<li><a href="###" >服务中心</a></li>
+				<li><a href="###" ><!--<img src="images/shoppingcart.png">-->购物车(0)</a></li>
+			</ul>
+			
+			<div class="search">
+				<form onsubmit="return false;">
+					<input id="search" type="text" placeholder="    空气净化器">
+					<button id="subButton" type="button" onclick="getSellPoint()">搜索</button>
+				</form>
+				<ul>
+					<li><a href="###">黑加仑葡萄干</a></li>
+					<li><a href="###">倍净空气净化器</a></li>
+					<li><a href="###">卓霏护肤系列</a></li>
+					<li><a href="###">睿康营养液</a></li>
+					<li><a href="###">真丝羽绒被</a></li>
+				</ul>
+			</div>
+			
+			<div class="header_nav">
+				<p>全部商品<span></span></p>
+				<ul>
+					<a href="index.html"><li>首页</li></a>
+					<a href="onnew.html"><li>上新</li></a>
+					<a href="###"><li>品牌</li></a>
+					<a href="privilege.html"><li>活动</li></a>
+					<a href="###"><li>会员专区</li></a>
+					<a href="###"><li>创客</li></a>
+					<a href="###"><li>关于我们</li></a>
+				</ul>
+			</div>
+			
+		</header>
+		<!--清理浮动-->
+		<div class="clearfix"></div>
+		<!--第一个界面开始-->
+		<div class="nav_pwd_first">
+			<ul>
+				<form>
+				<li class="remind_first ">
+					<span></span>用户名不能为空！
+				</li>
+				<li class="rtv_user">
+					<dd>账户名</dd><input type="text" name="" placeholder="请输入用户名" id="tele"/>
+				</li>
+				<!--清理浮动-->
+				<div class="clearfix"></div>
+				<li class="rtv_identifying">
+					<dd>验证码</dd><input type="text" name="" id="Code"/><img src="User/img" onclick="getCode(3)" style="cursor:pointer;" width="70" height="30"  alt="验证码" title="点击更换" id="imgCode"/></a>
+				</li>
+				<li class="rtv_submit">
+					<input type="button" name="" value="下一步"  onclick="sub()"/>
+				</li>
+				</form>
+			</ul>
+		</div>
+		<!--第一个界面结束-->
+		
+		<!--第二个界面开始-->
+		<div class="nav_pwd_second" id="pwd">
+			<div class="rtv_second">
+				<img src="images/pwd_1.jpg">
+			</div>
+			<ul>
+				<form>
+				<li class="remind_second" id="checkMeg">
+				</li>
+				<li class="user_second">
+					验证手机号码为：<span id="thisTele"></span>
+				</li>
+				<!--清理浮动-->
+				<div class="clearfix"></div>
+				<li class="rtv_identifying second_id">
+					<dd>验证码</dd><input type="text" name="" id="mesCode"/><dt id="getCode" onclick="messageCode()">获取短信验证码</dt>
+				</li>
+				<!--清理浮动-->
+				<li class="rtv_submit">
+					<input type="button" name="" value="下一步"  onclick="second()"/>
+				</li>
+				</form>
+			</ul>
+		</div>
+		
+		<!--第二个界面结束-->
+		
+		<!--第三个界面开始-->
+		<div class="nav_pwd_third">
+			<div class="rtv_second">
+				<img src="images/pwd_2.jpg">
+			</div>
+			<ul>
+				<form>
+				<li class="remind_first" >
+					
+				</li>
+				<li class="user_third">
+					账户名<span id="telephone"></span>
+				</li>
+				<!--清理浮动-->
+				<div class="clearfix"></div>
+				<li class="third_id">
+					<dd>新的登录密码</dd><input type="password" name="" id="password"/><span id="checkP" style="color:red"></span>
+				</li>
+				<!--清理浮动-->
+				<div class="clearfix"></div>
+				<li class="third_id_bottom">密码由6-16位字符组成 可使用字母 数字或者符号。</li>
+				<li class="third_id third_new">
+					<dd>确认新的登录密码</dd><input type="password" name="" id="checkpassword"/><span id="checkFP" style="color:red"></span>
+				</li>
+				<li class="rtv_submit rtv_submit_third">
+					<input type="button" name="" value="确定" onclick="third()"/>
+				</li>
+				</form>
+			</ul>
+		</div>
+		
+		<!--第三个界面结束-->
+		
+		<!--第四个界面开始-->
+		<div class="nav_pwd_fourth">
+			<div class="rtv_second">
+				<img src="images/pwd_3.jpg">
+			</div>
+			<ul>
+				<form>
+				<li class="remind_fourth">
+					<span></span>恭喜您设置完成，请妥善保管好您的密码
+				</li>
+				<li class="user_fourth">
+					页面将在<span id="show">5秒</span>内跳转至登录首页
+				</li>
+				</form>
+			</ul>
+		</div>
+		<!--第四个界面结束-->
+		
+		
+			<!--底部-->
+		<footer>
+				<div class="footer_top">
+						<ol>
+							<h4>新手指南</h4>
+							<li><a href="###">注册新用户</a></li>
+							<li><a href="###">网上订购流程</a></li>
+							<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>付款方式</h4>
+							<li><a href="###">在线支付</a></li>
+							<!--<li>网上订购流程</li>
+							<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>物流配送</h4>
+							<li><a href="###">快递配送</a></li>
+							<li><a href="###">到店自提</a></li>
+							<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>售后服务</h4>
+							<li><a href="###">退货说明</a></li>
+							<li><a href="###">如何办理退款</a></li>
+							<li><a href="###">售后服务保养手册</a></li>
+							<!--<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+				</div>
+				<!--清理浮动-->
+				<div class="clearfix"></div>	
+			
+				<div class="footer_center">
+					<ol class="range">
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品证</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+					</ol>
+				</div>
+				
+				<!--清理浮动-->
+				<div class="clearfix"></div>	
+				
+				<div class="footer_bottom range">
+					<ol>
+						<li>
+							<a href="###">秋露网</a>
+						</li>
+						<li>
+							<a href="###">秋露招商</a>
+						</li>
+					</ol>
+					<!--清理浮动-->
+				<div class="clearfix"></div>	
+					<ol>
+						<li>
+							统一社会信用代码：91110102689248179K
+						</li>
+						<li>
+							<a href="###">
+								<figure>
+									<img src="images/footerbottom.jpg">
+									<figcaption>京公安备11010102001392</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li>
+							京ICP证110119号 京ICP备09084709号-3
+						</li>
+						<li>
+							ISO9001中国质量管理体系认证
+						</li>
+					</ol>
+					<!--清理浮动-->
+					<div class="clearfix"></div>
+					<ol>
+						<li><a href="###">加入秋露</a></li>
+						<li><a href="###">联系我们</a></li>
+						<li><a href="###">关于我们</a></li>
+						<li><a href="###">帮助我们</a></li>
+						<li><a href="###">友情链接</a></li>
+					</ol>
+					<!--清理浮动-->
+					<div class="clearfix"></div>
+					<ol>
+						<li>COPYRIGHT © 2010-2016 秋露贸易有限公司 版权所有</li>
+					</ol>
+				<p>
+				<figure class="footer_code">
+				<img src="images/code.png">
+				<figcaption>扫描进入秋露微信商城</figcaption>
+				</figure>
+				</p>
+				</div>
+				
+		</footer>
+		
+	</body>
+</html>

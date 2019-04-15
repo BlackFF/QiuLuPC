@@ -1,0 +1,288 @@
+
+/*头部*/
+header {
+	height: 163px;
+	position: relative;
+}
+header > h1 {
+	text-indent: -9999px;
+	display: none;
+}
+/*图标*/
+header >  .logo {
+	float:left;
+	height: 163px;
+}
+header >  .logo img {
+	height: 103px;
+	margin:15px 0 0 70px;
+}
+/*头部上面列表*/
+header >  .list {
+	float:right;
+	margin:5px 20px 0 0;
+}
+header >  .list li {
+	float:left;
+	margin-right: 25px ;
+}
+header >  .list a:hover {
+	color:#463B7F;
+}
+
+/*搜索*/
+/*header >  .search {
+	position: absolute;
+	left: 250px;
+	top:55px;
+}*/
+header > .search input {
+	position: absolute;
+	left: 250px;
+	top:55px;
+	height: 34px;
+	width:410px ;
+	border: 2px solid #463B7F;
+	box-sizing: border-box;
+}
+
+header > .search button {
+	position: absolute;
+	left: 668px;
+	top:55px;
+	height: 34px;
+	width:70px ;
+	background-color:#463B7F ;
+	border: 2px solid #463B7F;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 600;
+	margin-left:-8px ;
+	cursor: pointer;
+}
+header > .search button:hover{
+	background-color:#382F6B ;
+}
+header > .search ul {
+	position: absolute;
+	left: 250px;
+	top:95px;
+}
+header > .search ul li {
+	float: left;
+	margin-left:20px ;
+}
+header >  .search ul li a:hover {
+	color: #FF0000;
+	text-decoration:underline;
+}
+.header_nav {
+	min-width: 1000px;
+}
+header >  .header_nav p {
+	position: absolute;
+	left: 0;
+	bottom:0;
+	height: 35px;
+	line-height: 35px;
+	width: 182px;
+	text-align:center ;
+	background-color:#382F6B ;
+	color: #fff;
+	font-size: 14px;
+}
+
+header >  .header_nav ul {
+	position: absolute;
+	left: 250px;
+	bottom:0;
+	height: 35px;
+	line-height: 35px;
+	text-align:center ;
+	color: #fff;
+	font-size: 14px;
+}
+header >  .header_nav ul li{
+	width: 100px;
+	text-align: center;
+	display: inline-block;
+}
+header >  .header_nav ul li:hover {
+	color:#463B7F;
+}
+
+
+
+
+*,
+	::before
+	::after {
+		padding:0;
+		margin:0;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,figure,figcaption { margin: 0; padding: 0; }
+	
+	body {
+		font-size: 13px;
+		font-family: "微软雅黑",sans-serif;
+		color: #999;
+	}
+	a {
+		text-decoration: none;
+		color: #999;
+	}
+	a:hover{
+		text-decoration: none;
+	}
+	input {
+		border: none;
+		outline: none;
+		/*-webkit-appearance: none;*/
+	}
+	ul,ol {
+		list-style: none;
+	}
+	img {
+	max-width:100%;
+	border:0;
+}
+	/*comm CSS*/
+	.f_left {
+		float: left;
+	}
+	.f_right {
+		float: right;
+	}
+	.clearfix::before,
+	.clearfix::after {
+		content: "";
+		height:0;
+		line-height: 0;
+		display: block;
+		visibility: hidden;
+		clear: both;
+	}
+	
+	@keyframes myani {
+		50% {
+		opacity: 0.8;
+		}
+	}
+	@keyframes goods_details_bottom {
+		50% {
+			top:-7px;
+		}
+		100% {
+			top:0;
+		}
+	}
+	@keyframes like_button_move {
+		30% {
+			margin-right:3px;
+		}
+		60% {
+			margin-right:-3px;
+		}
+		100% {
+			margin:0;
+		}
+	}
+	.range {
+		width: 100%;
+		max-width: 1200px;
+		min-width: 1200px;
+		margin: 0 auto;
+	}
+	
+	
+	footer {
+		position: relative;
+		margin-top:40px;
+	}
+	.footer_top {
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.footer_top ol {
+		width:250px;
+		float: left;
+	}
+	.footer_top ol h4 {
+		color:#000;
+		margin-bottom:10px ;
+	}
+	.footer_top ol li {
+		margin-bottom:5px ;
+	}
+	.footer_top a:hover {
+		color:#463B7F;
+	}
+	.footer_center {
+		background: url(../images/footer1.png) repeat-x right center;
+		height:39px ;
+		width: 100%;
+		margin-top:30px;
+	}
+	.footer_center ol {
+		padding-left: 200px;
+	}
+	.footer_center ol li {
+		float:left;
+		width:200px;
+	}
+	.footer_center ol li figure {
+		position: relative;
+	}
+	
+	.footer_center ol li figure figcaption {
+		color: #fff;
+		position: absolute;
+		top:10px;
+		left:30px;
+	} 
+	
+	.footer_bottom {
+		margin-bottom:70px ;
+		position: relative;
+	}
+	.footer_bottom ol {
+		width: 100%;
+		margin-top: 20px;
+		margin-left: 20px;
+	}
+	.footer_bottom ol li {
+		float: left;
+		margin-right: 20px;
+	}
+	.footer_bottom ol li figure {
+		position:relative;
+		width: 180px;
+	}
+	.footer_bottom a:hover {
+		color:#463B7F;
+	}			
+	.footer_bottom ol li figure img {
+		width: 17px;
+	}
+	.footer_bottom ol li figcaption {
+		position: absolute;
+		top:0;
+		left:20px;
+		white-space: nowrap;
+	}
+	.footer_code {
+		position: absolute;
+		right: 50px;
+		bottom:0;
+		text-align: center;
+	}
+	.footer_code img {
+		width: 80px;
+		vertical-align: middle;
+	}
+	.footer_code figcaption {
+		margin-top: 5px;
+	}	

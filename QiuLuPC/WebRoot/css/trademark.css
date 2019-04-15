@@ -1,0 +1,357 @@
+.layout {
+	background: #EDEDED;
+	padding-bottom:40px ;
+}
+.trademark_search {
+	height: 60px;
+}
+.trademark_search input {
+	float: right;
+	height: 22px;
+	width: 160px;
+	margin-top: 20px;
+	background: #fff;
+}
+.trademark_search button {
+	float: right;
+	width: 40px;
+	height: 22px;
+	line-height: 22px;
+	text-align:center;
+	background: #fff;
+	color: #333;
+	border: none;
+	margin-top: 20px;
+}
+/*商品图片*/
+.trade_img {
+	height: 590px;
+	width: 1200px;
+	background: #EDEDED;
+}
+.trade_img li {
+	float: left;
+}
+.trade_img li:hover {
+	animation: myani 1.5s ease 1 alternate 0s both;
+}
+.trade_img_one {
+	height: 590px;
+	width: 490px;
+	margin-right: 10px;
+	position: relative;
+}
+.trade_img_one figure img {
+	height: 590px;
+	width: 490px;
+}
+.trade_img_one figcaption {
+	width: 320px;
+	height: 140px;
+	background: #eee;
+	position: absolute;
+	bottom: 35px;
+	left: 85px;
+	text-align: center;
+	opacity: 0.8;
+}
+.one_text1 {
+	font-size: 20px;
+	color: #333;
+	font-weight: 600;
+	margin-top: 20px;
+}
+.one_text2 {
+	font-size: 16px;
+	color: #333;
+	margin-top: 20px;
+	margin-left: -50px;
+	font-weight: 600;
+}
+.one_text3 {
+	font-size: 16px;
+	color: #333;
+	margin-top: 10px;
+	margin-left: 50px;
+	font-weight: 600;
+}
+
+.trade_img_two {
+	width: 700px;
+	height:290px ;
+	margin-bottom: 10px;
+	position: relative;
+}
+.trade_img_two figure img {
+	width: 700px;
+	height:290px ;
+}
+.two_text1 {
+	font-size: 20px;
+	color: #fff;
+	position: absolute;
+	right: 30px;
+	top:200px;
+}
+.two_text2 {
+	font-size: 15px;
+	color: #fff;
+	position: absolute;
+	right: 30px;
+	top:260px;
+}
+.two_text3 {
+	font-size: 15px;
+	color: #fff;
+	position: absolute;
+	right: 30px;
+	top:290px;
+}
+.trade_img_three {
+	width: 200px;
+	height: 290px;
+	background: #fff;
+	margin-right: 10px;
+	color: #333;
+	position: relative;
+}
+.trade_img_three img {
+	position:absolute;
+	bottom: 20px;
+	left:20px ;
+}
+.three_text1 {
+	width: 150px;
+	position:absolute;
+	top:20px;
+	left: 25px;
+}
+.trade_img_three:hover img {
+	bottom:50px;
+	transition: all 1s ease 0s;
+}
+.trade_img_four {
+	width: 240px;
+	height: 290px;
+	background: #fff;
+	margin-right: 10px;
+	position: relative;
+	color: #333;
+}
+.trade_img_four img {
+	position:absolute;
+	bottom: 20px;
+	right:20px;
+}
+.four_text1 {
+	width: 180px;
+	position:absolute;
+	top:20px;
+	left: 30px;
+}
+.trade_img_four:hover img {
+	bottom:50px;
+	right:50px ;
+	transition: all 1s ease 0s;
+}
+.trade_img_five {
+	width: 240px;
+	height: 140px;
+	background: #fff;
+	margin-bottom: 10px;
+	position: relative;
+	color: #333;
+}
+.trade_img_five img {
+	position:absolute;
+	bottom: 0;
+	right:0;
+}
+.five_text1 {
+	width: 120px;
+	position:absolute;
+	top:20px;
+	left: 15px;
+}
+
+
+.trade_img_six {
+	width: 240px;
+	height: 140px;
+	background: #fff;
+	color: #333;
+	position: relative;
+}
+.trade_img_six img {
+	position:absolute;
+	bottom: 0;
+	right:0;
+}
+.six_text1 {
+	width: 120px;
+	position:absolute;
+	top:20px;
+	left: 15px;
+}
+.trademark_show {
+	text-align: center;
+	color: #333;
+	font-size: 25px;
+	margin: 50px 0 30px;
+}
+
+
+#box {
+	margin-top: 10px;
+	width:1200px;
+	font-size:12px;
+	/*float: left;*/
+} 
+#box #tab {
+	height: 50px;
+	border-bottom: 1px solid #ECECEC;
+	font-size: 15px;
+}
+#box #tab span {
+	float: left;
+	border: 1px solid #fff;
+	width:150px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	float:left;
+	cursor:pointer;
+	position:relative;
+	top:1px;
+	background: #000;
+	color: #fff;
+}
+#box #tab span:hover {
+	background:#7F69B2 ;
+}
+#box #tab span.on {
+	background: #7F69B2;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	font-size:16px ;
+	font-weight: 600;
+}
+
+#box #tab_con {
+	border-top: none;
+	padding: 20px;
+	background: #fff;
+}
+
+#box #tab_con>li {
+	display: none;
+}
+
+#box #tab_con #tab_con_1 {
+	display: block;
+}
+.tab_con_weight {
+	font-weight: 600;
+	margin-left: 30px;
+	font-size: 14px;
+}
+
+
+/*具体产品*/
+.products {
+	max-width: 1200px;
+	min-width: 1120px;
+	padding:5px 30px;
+	background:#fff;
+	color: #333333;
+}
+.products li {
+	width: 240px;
+	display: inline-block;
+	height: 370px;
+	margin-right:40px ;
+	margin-bottom: 10px;
+	padding: 0 10px;
+	border: 2px solid #fff;
+	box-sizing: border-box;
+}
+.products li:hover {
+	animation: myani 1s ease 1 alternate 0s both;
+}
+.products li:nth-child(4) {
+	margin-right: 0;
+}
+.products li figure > a {
+	height: 280px;
+	line-height: 280px;
+	display: block;
+}
+.products li figure img {
+	width: 250px;
+	height: 250px;
+}
+.products li figcaption {
+	height: 90px;
+	float: left;
+}
+.description {
+	padding: 8px;
+	height:40px;
+	display: block;
+	overflow: hidden;
+	line-height: 150%;
+	color: #666;
+}
+.products_prices {
+	float: left;
+	font-weight: 600;
+	color: #000;
+	margin-top: 10px;
+	color: #E93B39;
+	font-size: 18px;
+	
+}
+.products_sales {
+	float: right;
+}
+
+.products_box {
+	width: 100%;
+	height:50px ;
+}
+.products_drop {
+	width: 100%;
+	float: left;
+	height: 40px;
+	margin-top:10px ;
+	display: none;
+}
+.products_cart {
+	padding: 3px 5px 5px;
+	background: #E93B39;
+	color: #fff;
+	margin-right:10px ;
+}
+.collection {
+	float: right;
+}
+.collection i {
+	width:15px;
+	height: 13px;
+	display: inline-block;
+	background:url(../images/icons.png)  0 -20px  no-repeat;
+	background-size:150px 150px ;
+	margin-right: 5px;
+}
+.collection:hover {
+	color: #E93B39;
+}
+.collection:hover i {
+	width:15px;
+	height: 13px;
+	display: inline-block;
+	background:url(../images/icons.png)  0 -33px  no-repeat;
+	background-size:150px 150px ;
+	margin-right: 5px;
+}

@@ -1,0 +1,139 @@
+/*尺寸新加开始*/
+.goods_color {
+	padding:15px 0 ;
+}
+.goods_color li {
+	width: 100%;
+	/*margin:20px 0;*/
+	display: flex;
+	position: relative;
+}
+.goods_color li dd {
+	/*float:left;*/
+	margin: 20px 17px 10px 30px;
+	color: #333;
+}
+.goods_color li dt {
+	/*float:left;*/
+}
+.good_size {
+	/*float:left;*/
+	margin: 0 22px 0 30px;
+	color: #333;
+}
+.good_code {
+	padding: 10px;
+	background: #fff;
+}
+.good_code_unSelected {
+	background: #eee;
+}
+
+.good_code span {
+	width: 33px;
+	height: 33px;
+	text-align: center;
+	line-height: 33px;
+	background: #fff;
+	color: #666;
+	display: inline-block;
+	margin-left: 10px;
+	border: 1px solid #ededed;
+	padding: 1px;
+}
+#margin_first {
+	margin-left: 0;
+}
+.goods_on img,.goods_on span{
+	border: 2px solid #7F69B3;
+	padding: 0px;
+}
+.good_code span:hover {
+	border: 2px solid #7F69B3;
+	padding: 0;
+}
+.good_code .disable span{
+	border: 1px dashed #999;
+    color: #dedede;
+    /*cursor: not-allowed;*/
+}
+.good_code a:first-of-type span {
+    margin-left: 0px;
+}
+.good_code .disable span:hover  {
+    padding: 1px;
+}
+/*尺寸新加结束*/
+
+/*选择商品数量 开始*/
+.goods-buy-count li {
+	width: 100%;
+	display: flex;
+	position: relative;
+}
+.goods-buy-count li dd{
+	margin: 20px 17px 10px 30px;
+	color: #333;
+}
+.goods_number {
+	margin-left: 22px;
+	position: absolute;
+    bottom: 10px;
+}
+.goods_number input {
+	float: left;
+	height: 22px;
+	width:36px;
+	margin-left:-4px ;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	text-align: center;
+}
+.goods_number i {
+	float: left;
+	width:25px;
+	height: 22px;
+	line-height: 22px;
+	display: inline-block;
+	background-size:350px 350px ;
+}
+.goods_number .price_add:hover  {
+	background:url(../images/icons.png)  -39px -86px  no-repeat;
+	background-size:350px 350px ;
+}
+.goods_number .price_subtract:hover  {
+	background:url(../images/icons.png)  -39px -113px  no-repeat;
+	background-size:350px 350px ;
+}
+.goods_number span {
+	float: left;
+	margin-left: 20px;
+	color: #333;
+}
+.goods_number span strong {
+	color:#D42220 ;
+	margin: 0 4px;
+}
+/*选择商品数量 结束*/
+
+/*购买商品或加入购物车 开始*/
+.add_shops {
+	float: left;
+	margin: 20px 17px 10px 30px;
+}
+.add_shops p {
+	margin-right: 20px;
+	color: #fff;
+	padding: 12px 45px;
+	background: #D42220;
+	font-size: 17px;
+	display: inline-block;
+}
+.add_shops span {
+	color: #D42220;
+	padding: 10px 40px;
+	font-size: 17px;
+	display: inline-block;
+	border: 2px solid #D42220;
+}
+/*购买商品或加入购物车 结束*/

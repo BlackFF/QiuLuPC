@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>订单详情</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+			<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+			<link rel="stylesheet" type="text/css" href="../../css/index.css" />
+			<link rel="stylesheet" type="text/css" href="../../css/user/personal.css" />
+			<link rel="stylesheet" type="text/css" href="../../css/user/order_details.css" />
+			<link rel="stylesheet" type="text/css" href="../../css/animate.css" />
+			<link rel="stylesheet" type="text/css" href="../../css/flavr.css" />
+			
+			<script type="text/javascript" src="../../js/user/personal/images_path.js"></script>
+			<script type="text/javascript" src="../../js/jquery.min.js"></script>
+			<script type="text/javascript" src="../../js/flavr.min.js"></script>
+			<script type="text/javascript" src="../../js/user/sam/order_details.js"></script>
+			<script type="text/javascript" src="../../js/base.js"></script>
+	<body>
+		<!--头部-->
+		<header class="range">
+			<h1>个人中心</h1>
+			<div class="logo">
+				<img src="../../images/logo.png"/>
+			</div>
+			<ul class="list">
+			<li>欢迎光临秋露商城</li>
+				<li><a href="###" >请登录</a></li>
+				<li><a href="../../register.html" >免费注册</a></li>
+				<li><a href="../../user/personal/personal_indent.html" >我的订单</a></li>
+				<li><a href="###" >服务中心</a></li>
+				<li><a href="../cart.html" >购物车</a></li>
+			</ul>
+			
+			<div class="search">
+				<form onsubmit="return false;">
+					<input id="search" type="text" placeholder="    空气净化器">
+					<button type="button" onclick="getSellPoint()">搜索</button>
+				</form>
+				<ul>
+					<li><a href="###">黑加仑葡萄干</a></li>
+					<li><a href="###">倍净空气净化器</a></li>
+					<li><a href="###">卓霏护肤系列</a></li>
+					<li><a href="###">睿康营养液</a></li>
+					<li><a href="###">真丝羽绒被</a></li>
+				</ul>
+			</div>
+			
+			<div class="header_nav">
+				<p>全部商品</p>
+				<ul>
+					<a href="../../index.html"><li>首页</li></a>
+					<a href="###"><li>上新</li></a>
+					<a href="###"><li>品牌</li></a>
+					<a href="../../privilege.html"><li>活动</li></a>
+					<a href="###"><li>会员专区</li></a>
+					<a href="###"><li>创客</li></a>
+					<a href="###"><li>关于我们</li></a>
+				</ul>
+			</div>
+		</header>
+		
+		<div class="layout">    <!--背景颜色-->
+			<div class="wrap range">
+				<div id="menu">
+					<ul>
+						<a href="../personal/personal.html"><div id="m1"class="my_qiulu"><dd>我的秋露</dd></div></a>
+					<p>我是买家</p>
+					<span onclick="location.href='../personal/personal_indent.html'"><li id="m2" class="menu_on"><dt><i class="circle_on"></i>我的订单</dt></li></span>
+					<a href="../personal/personal_collect.html"><li id="m3"><dt><i class="circle"></i>我的收藏</dt></li></a>
+					<a href="../personal/personal_evaluate.html"><li id="m4"><dt><i class="circle"></i>商品评价</dt></li></a>
+					<a href="../personal/personal_service.html" ><li id="m5"><dt><i class="circle"></i>我的售后</dt></li></a>
+					
+					<p>账号中心</p>
+					<a href="../personal/personal_information.html"><li id="m6" ><dt><i class="circle"></i>账号信息</dt></li></a>
+					<a href="../personal/personal_security.html"><li id="m7"><dt><i class="circle"></i>账号安全</dt></li></a>
+					<a href="../personal/personal_address.html"><li id="m8" class="menu"><dt><i class="circle"></i>收货地址</dt></li></a>
+					</ul>
+				</div>
+				
+				
+				<!--订单提交-->
+				<div id="content">
+					<div class="submit_order" id="status0">
+						<h4>订单详情</h4>
+						<div class="submit_order_top">
+							<ul class="submit_title">
+								<li class="f_left">状态：<span class="color_red">订单提交</span></li>
+								<li class="f_left">订单编号：100010101010101</li>
+								<li class="f_left">下单时间：2017-2-23 11.11.11</li>
+								<a href="javascript:void(0);"><li class="f_right cannel">取消订单</li></a>
+								<a href="javascript:void(0);"><li class="f_right pay_now">立即支付</li></a>
+							</ul>
+							<ul class="submit_plan">
+								<li>
+									<i class="submit_plan_s"></i>
+									<p>提交订单</p>
+									<span>2017.12.11 11.11.11</span>
+								</li>
+								<li>
+									<i class="submit_plan_n"></i>
+									<p>配货中</p>
+									<span></span>
+								</li>
+								<li>
+									<i class="submit_plan_n"></i>
+									<p>已发货</p>
+									<span></span>
+								</li>
+								<li>
+									<i class="submit_plan_n"></i>
+									<p>确认收货</p>
+									<span></span>
+								</li>
+								<li>
+									<i class="submit_plan_n"></i>
+									<p>完成</p>
+									<span></span>
+								</li>
+							</ul>
+							<ul class="order_tracking">
+								<li>尊敬的用户：该订单会为您保存一个小时（从下单之时算起），1小时之后如果还未付款，系统将自动取消订单，释放库存，请您尽快付款，如果您已经付款，请务必操作付款确认。如有疑问，请联系在线客服。</li>
+								<li class="order_padding">
+									订单跟踪：<span class="order_color_br">2017-03-11 09:11:12 您的订单已确认</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+					
+					<!--配货中-->
+					<!--<div id="content">
+					<div class="submit_order">
+						<h4>订单详情</h4>
+						<div class="submit_order_top">
+							<ul class="submit_title">
+								<li class="f_left">状态：<span class="color_red">配货中</span></li>
+								<li class="f_left">订单编号：100010101010101</li>
+								<li class="f_left">下单时间：2017-2-23 11.11.11</li>
+							</ul>
+							<ul class="submit_plan">
+								<li>
+									<i class="submit_plan_s"></i>
+									<p>提交订单</p>
+									<span>2017.12.11 11.11.11</span>
+								</li>
+								<li>
+									<i class="submit_plan_s"></i>
+									<p>配货中</p>
+									<span>2017.12.11 13.11.11</span>
+								</li>
+								<li>
+									<i class="submit_plan_n"></i>
+									<p>已发货</p>
+									<span></span>
+								</li>
+								<li>
+									<i class="submit_plan_n"></i>
+									<p>确认收货</p>
+									<span></span>
+								</li>
+								<li>
+									<i class="submit_plan_n"></i>
+									<p>完成</p>
+									<span></span>
+								</li>
+							</ul>
+							<ul class="order_tracking">
+								<li class="order_padding">
+									<p>订单跟踪：2017-03-11 09:11:12 您的订单已经提交，等待系统确认</p>
+									<p class="order_color">2017-03-11 09:11:12 您的订单已确认</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					</div>-->
+					
+					
+						<!--已发货-->
+					<!--<div id="content">
+					<div class="submit_order">
+						<h4>订单详情</h4>
+						<div class="submit_order_top">
+							<ul class="submit_title">
+								<li class="f_left">状态：<span class="color_red">已发货</span></li>
+								<li class="f_left">订单编号：100010101010101</li>
+								<li class="f_left">下单时间：2017-2-23 11.11.11</li>
+							</ul>
+							<ul class="submit_plan">
+								<li>
+									<i class="submit_plan_s"></i>
+									<p>提交订单</p>
+									<span>2017.12.11 11.11.11</span>
+								</li>
+								<li>
+									<i class="submit_plan_s"></i>
+									<p>配货中</p>
+									<span>2017.12.11 13.11.11</span>
+								</li>
+								<li>
+									<i class="submit_plan_s"></i>
+									<p>已发货</p>
+									<span>2017.12.12 13.11.11</span>
+								</li>
+								<li>
+									<i class="submit_plan_n"></i>
+									<p>确认收货</p>
+									<span></span>
+								</li>
+								<li>
+									<i class="submit_plan_n"></i>
+									<p>完成</p>
+									<span></span>
+								</li>
+							</ul>
+							<ul class="order_tracking">
+								<li>尊敬的用户：该订单已发货，请耐心等待并查看页面下方物流信息了解商品物流情况。</li>
+								
+								<li class="order_padding">
+									<p>订单跟踪：2017-03-11 09:11:12 您的订单已经提交，等待系统确认</p>
+									<p class="order_padding_left">2017-03-11 09:11:12 您的订单已确认</p>
+									<p class="order_padding_left">2017-03-11 09:11:12 您的订单已确认</p>
+									<p class="order_padding_left">2017-03-11 09:11:12 您的订单已确认</p>
+									<p class="order_padding_left">2017-03-11 09:11:12 您的订单已确认</p>
+									<p class="order_padding_left">2017-03-11 09:11:12 您的订单已确认</p>
+									<p class="order_color">2017-03-11 09:11:12 您的订单已确认</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					</div>-->
+					
+					
+					
+						<!--全部签收-->
+					<!--<div id="content">
+					<div class="submit_order">
+						<h4>订单详情</h4>
+						<div class="submit_order_top">
+							<ul class="submit_title">
+								<li class="f_left">状态：<span class="color_red">已签收</span></li>
+								<li class="f_left">订单编号：100010101010101</li>
+								<li class="f_left">下单时间：2017-2-23 11.11.11</li>
+							</ul>
+							<ul class="submit_plan">
+								<li>
+									<i class="submit_plan_s"></i>
+									<p>提交订单</p>
+									<span>2017.12.11 11.11.11</span>
+								</li>
+								<li>
+									<i class="submit_plan_s"></i>
+									<p>配货中</p>
+									<span>2017.12.11 13.11.11</span>
+								</li>
+								<li>
+									<i class="submit_plan_s"></i>
+									<p>已发货</p>
+									<span>2017.12.12 13.11.11</span>
+								</li>
+								<li>
+									<i class="submit_plan_s"></i>
+									<p>确认收货</p>
+									<span></span>
+								</li>
+								<li>
+									<i class="submit_plan_n"></i>
+									<p>完成</p>
+									<span></span>
+								</li>
+							</ul>
+							<ul class="order_tracking">
+								<li>尊敬的用户：该订单已发货，请耐心等待并查看页面下方物流信息了解商品物流情况。</li>
+								
+								<li class="order_padding">
+									<p>订单跟踪：2017-03-11 09:11:12 您的订单已经提交，等待系统确认</p>
+									<p class="order_padding_left">2017-03-11 09:11:12 您的订单已确认</p>
+									<p class="order_padding_left">2017-03-11 09:11:12 您的订单已确认</p>
+									<p class="order_padding_left">2017-03-11 09:11:12 您的订单已确认</p>
+									<p class="order_padding_left">2017-03-11 09:11:12 您的订单已确认</p>
+									<p class="order_padding_left">2017-03-11 09:11:12 您的订单已确认</p>
+									<p class="order_padding_left">2017-03-11 09:11:12 您的订单已确认</p>
+									<p class="order_padding_left">2017-03-11 09:11:12 您的订单已确认</p>
+									<p class="order_padding_left">2017-03-11 09:11:12 您的订单已确认</p>
+									<p class="order_color">2017-03-11 09:11:12 已签收</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					</div>-->
+						
+						
+					<!--支付信息	-->
+					<div id="content">
+					<div class="payment">
+						<h4>支付信息</h4>
+						<div class="payment_menu">
+							<ul class="payment_menu_top">
+								<li>
+									<dd>收货人信息</dd>
+									<dt>
+										<span>李刚，</span>
+										<span>18888888888，</span>
+										<span>河南省郑州市金水区未来路曼哈顿广场5号楼</span>
+									</dt>
+								</li>
+								<li>
+									<dd>支付及配送信息</dd>
+									<dt>
+										<p>支付方式：在线支付</p>
+										<p>配送方式：快递送货上门</p>
+										<p>运费：0</p>
+									</dt>
+								</li>
+								<li>
+									<dd>发票信息</dd>
+									<dt>
+										<p>索要发票：否</p>
+									</dt>
+								</li>
+							</ul>
+							<div class="payment_table">
+								<table width="930" border="0" cellspacing="0" cellpadding="0">
+								  <tr>
+								    <td width="327" height="40" align="center">商品</td>
+								    <td width="120" align="center">状态</td>
+								    <td width="114" align="center">单价</td>
+								    <td width="73" align="center">数量</td>
+								    <td width="110" align="center">关税</td>
+								    <td width="186" align="center">小计</td>
+								  </tr>
+								  <tr class="payment_tr">
+								    <td align="left" class="payment_img">
+								    	<a href="###"><img src="../../images/goods-1.jpg"></a><a href="###"><span>选择支付方式，国内用户支持支付宝、银联支付。这里选择支付宝付款</span></a>
+								    </td>
+								    <td align="center">配货中</td>
+								    <td align="center">￥59</td>
+								    <td align="center">1</td>
+								    <td align="center">￥0</td>
+								    <td align="center">￥59</td>
+								  </tr>
+								</table>
+							</div>
+							<div class="payment_bottom">
+								<p>商品金额：<span>￥59</span></p>
+								<div>应付金额：<span>59.00</span></div>
+							</div>
+						</div>
+					</div>
+					</div>
+					
+					
+					
+					
+				</div>
+				</div>
+		
+		
+		
+		
+		<!--清理浮动-->
+				<div class="clearfix"></div>	
+			<!--底部-->
+		<footer>
+				<div class="footer_top">
+						<ol>
+							<h4>新手指南</h4>
+							<li><a href="###">注册新用户</a></li>
+							<li><a href="###">网上订购流程</a></li>
+							<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>付款方式</h4>
+							<li><a href="###">在线支付</a></li>
+							<!--<li>网上订购流程</li>
+							<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>物流配送</h4>
+							<li><a href="###">快递配送</a></li>
+							<li><a href="###">到店自提</a></li>
+							<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>售后服务</h4>
+							<li><a href="###">退货说明</a></li>
+							<li><a href="###">如何办理退款</a></li>
+							<li><a href="###">售后服务保养手册</a></li>
+							<!--<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+				</div>
+				<!--清理浮动-->
+				<div class="clearfix"></div>	
+			
+				<div class="footer_center">
+					<ol class="range">
+						<li>
+							<figure>
+								<img src="../../images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="../../images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="../../images/footer2.png">
+								<figcaption>100%保证真品证</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="../../images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="../../images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+					</ol>
+				</div>
+				
+				<!--清理浮动-->
+				<div class="clearfix"></div>	
+				
+				<div class="footer_bottom range">
+					<ol>
+						<li>
+							<a href="###">秋露网</a>
+						</li>
+						<li>
+							<a href="###">秋露招商</a>
+						</li>
+					</ol>
+					<!--清理浮动-->
+				<div class="clearfix"></div>	
+					<ol>
+						<li>
+							统一社会信用代码：91110102689248179K
+						</li>
+						<li>
+							<a href="###">
+								<figure>
+									<img src="../../images/footerbottom.jpg">
+									<figcaption>京公安备11010102001392</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li>
+							京ICP证110119号 京ICP备09084709号-3
+						</li>
+						<li>
+							ISO9001中国质量管理体系认证
+						</li>
+					</ol>
+					<!--清理浮动-->
+					<div class="clearfix"></div>
+					<ol>
+						<li><a href="###">加入秋露</a></li>
+						<li><a href="###">联系我们</a></li>
+						<li><a href="###">关于我们</a></li>
+						<li><a href="###">帮助我们</a></li>
+						<li><a href="###">友情链接</a></li>
+					</ol>
+					<!--清理浮动-->
+					<div class="clearfix"></div>
+					<ol>
+						<li>COPYRIGHT © 2010-2016 秋露贸易有限公司 版权所有</li>
+					</ol>
+				<p>
+				<figure class="footer_code">
+				<img src="../../images/code.png">
+				<figcaption>扫描进入秋露微信商城</figcaption>
+				</figure>
+				</p>
+				</div>
+				
+		</footer>
+		
+	</body>
+</html>
+

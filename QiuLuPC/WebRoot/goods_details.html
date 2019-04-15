@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>商品详情</title>
+			<link rel="stylesheet" type="text/css" href="css/base.css" />
+			<link rel="stylesheet" type="text/css" href="css/classification.css" />
+			<link rel="stylesheet" type="text/css" href="css/goods_details.css" />
+			<link rel="stylesheet" type="text/css" href="css/goods_details.sku.css" />
+			<link rel="stylesheet" type="text/css" href="css/animate.css" />
+			<link rel="stylesheet" type="text/css" href="css/flavr.css" />
+			<link rel="stylesheet" href="css/magnifier/zzsc.css" />
+			<script type="text/javascript" src="js/jquery.min.js"></script>
+			<script type="text/javascript" src="js/flavr.min.js"></script>
+			<script type="text/javascript" src="js/base.js"></script>
+			<script type="text/javascript" src="js/user/personal/images_path.js"></script> 
+			<script src="js/magnifier/jquery.colorbox-min.js"></script>
+			
+			<style>
+			    input::-webkit-outer-spin-button,
+			    input::-webkit-inner-spin-button {
+			        -webkit-appearance: none;
+			    }
+			    input[type="number"]{
+			        -moz-appearance: textfield;
+			    }
+			</style>
+		</head>
+	<body>
+		<!--头部-->
+		<header class="range">
+			<h1>商品详情</h1>
+			<div class="logo">
+				<img src="images/logo.png"/>
+			</div>
+			<ul class="list">
+				<li>欢迎光临秋露商城</li>
+				<li><a href="###" >请登录</a></li>
+				<li><a href="register.html" >免费注册</a></li>
+				<li><a href="user/personal/personal_indent.html" >我的订单</a></li>
+				<li><a href="###" >服务中心</a></li>
+				<li><a href="user/cart.html" ><!--<img src="images/shoppingcart.png">-->购物车</a></li>
+			</ul>
+			
+			<div class="search">
+				<form onsubmit="return false;">
+				<input id="search" type="text" placeholder="    空气净化器">
+					<button type="button" onclick="getSellPoint()">搜索</button>
+			    </form>
+				<ul>
+					<li><a href="###">黑加仑葡萄干</a></li>
+					<li><a href="###">倍净空气净化器</a></li>
+					<li><a href="###">卓霏护肤系列</a></li>
+					<li><a href="###">睿康营养液</a></li>
+					<li><a href="###">真丝羽绒被</a></li>
+				</ul>
+			</div>
+			<div class="header_nav">
+				<p>全部商品</p>
+				<ul>
+					<a href="index.html"><li>首页</li></a>
+					<a href="###"><li>上新</li></a>
+					<a href="###"><li>品牌</li></a>
+					<a href="privilege.html"><li>活动</li></a>
+					<a href="###"><li>会员专区</li></a>
+					<a href="###"><li>创客</li></a>
+					<a href="###"><li>关于我们</li></a>
+				</ul>
+			</div>
+		</header>
+		
+		<div class="layout">              <!--背景色-->
+		<div class="main range">
+		<div class="main_top ">
+			<div class="list_title">
+				<a href="###"><span>全部</span></a><i class="ico_right"></i>
+				<a href="###"><span>包袋</span></a><i class="ico_right"></i>
+				<a href="###"><span>钱包</span></a><i class="ico_right"></i>
+				<a href="###"><span>玻玻璃</span></a><i class="ico_right"></i>
+				<a href="###"><span>男士钱包蓝色阿迪达斯耐克酷奇</span></a>
+			</div>
+		</div>
+		<!--清理浮动-->
+		<div class="clearfix"></div>
+		<!--商品上部整体布局-->
+		<div class="goods_det_top">
+			<!--商品轮播图-->
+		<div class="goods_left">
+			<!--<div class="sec bnspic">
+				<div class="big_pic">
+					<ul>
+						<li class="on"><a href="###" id="bmig"><img src="images/goods_big1.jpg" /></a></li>
+						<li><a href="###"><img src="images/goods_big2.jpg"/></a></li>
+						<li><a href="###"><img src="images/goods_big3.jpg"/></a></li>
+						<li><a href="###"><img src="images/goods_big4.jpg"/></a></li>
+						<li><a href="###"><img src="images/goods_big5.jpg"/></a></li>
+					</ul>
+				</div>
+				<div class="small_pic">
+					<ul>
+						<li class="on"><a href="###" id="simg"><img src="images/goods_small1.jpg"/></a></li>
+						<li><a href="###"><img src="images/goods_small2.jpg" /></a></li>
+						<li><a href="###"><img src="images/goods_small3.jpg"  /></a></li>
+						<li><a href="###"><img src="images/goods_small4.jpg"  /></a></li>
+						<li><a href="###"><img src="images/goods_small5.jpg"/></a></li>
+					</ul>
+				</div>
+			</div>-->
+			<div class="con-FangDa" id="fangdajing">
+			  <div class="con-fangDaIMg">
+			  	<!-- 正常显示的图片-->
+			  	<img src="">
+			    <!-- 滑块-->  
+			    <div class="magnifyingBegin"></div>
+			    <!-- 放大镜显示的图片 -->
+			    <div class="magnifyingShow"><img src=""></div>
+			  </div>
+			  
+			  <ul class="con-FangDa-ImgList">
+			    <!-- 图片显示列表 -->
+			    <li class="active"><img src="" data-bigimg=""></li>
+			  </ul>
+			  	<!--清理浮动-->
+				<div class="clearfix"></div>
+			</div>
+			
+			<ul class="goods_left_bottom">
+				<li>
+					<i class="quality"></i><a href="###">正品保障</a>
+				</li>
+				<li>
+					<i class="refund"></i><a href="###">七天退款</a>
+				</li>
+				<li>
+					<i class="authority"></i><a href="###">权威质检</a>
+				</li>
+				<!-- <li>
+					<i class="share"></i><a href="###">分享</a>
+				</li> -->
+				<li>
+					<i class="collect"></i><a href="###">收藏商品</a>
+				</li>
+			</ul>
+		</div>
+		
+		
+		<!--左侧商品选择部分-->
+		<div class="goods_right">
+			<h2 id="h2">男士钱包蓝色阿男士色阿迪达斯耐达斯耐克酷奇</h2>
+			<div class="goods_price">
+				<p class="goods_price_top">
+					<span class="typeface1">秋露价</span>￥<span class="typeface2">2722</span>
+				</p>
+				<p class="goods_price_bottom">
+					发货地 <span class="goods_address">河南郑州</span> <span class="goods_orders">预计下单后<strong>2-4</strong>天发货</span>
+				</p>
+				<!--<p class="goods_prompt">
+					温馨提示<span class="prompt">本产品不支持货到付款</span>
+				</p>-->
+			</div>
+			
+			<ul class="goods_color">
+				<!-- <li>
+					<dd class="good_col">颜色</dd>
+					<dt class="goods_img good_code">
+						<a href="###" class="goods_on"><img src="images/goods_small1.jpg"></a>
+						<a href="###"><img src="images/goods_small1.jpg"></a>
+						<a href="###"><img src="images/goods_small1.jpg"></a>
+					</dt>
+				</li>
+				<li>
+					<dd  class="good_size">服装尺寸</dd>
+					<dt class="good_code good_code_unSelected">
+						<a href="###"><span id="margin_first" >XS</span></a>
+						<a href="###" class="disable"><span >S</span></a>
+						<a href="###"><span>M</span></a>
+						<a href="###"><span>XXL</span></a>
+					</dt>
+				</li> -->
+				
+			</ul>
+			<ul class="goods-buy-count">
+				<li>
+					<dd>购买数量</dd>
+					<dt class="goods_number">
+						<a href="javaScript:void(0)" onclick="method(this)"><i class="price_add"></i></a><input id="qulity" type="number" placeholder="1" value="1"><a href="javaScript:void(0)" onclick="add(this)"><i class="price_subtract"></i></a>
+					</dt>
+				</li>
+			</ul>
+
+			<div class="add_shops">
+				<a href="javaScript:void(0)"><p>立即抢购</p></a><a href="javaScript:void(0)"><span>加入购物车</span></a>
+			</div>
+		</div>
+		</div>
+		
+		<!--清理浮动-->
+			<div class="clearfix"></div>
+		
+		
+		<!--中部商品详情-->
+		<div class="goods_det_center">
+			<div class="goods_center_left">
+				<ul  id="similar_goods">
+					<h5>相关商品</h5>
+				</ul>
+				<ul  id="saleVolume_goods">
+					<h5>畅销排行</h5>
+				</ul>
+			</div>
+			
+			
+			<div class="goods_center_right">
+				
+					<div class="goods_right_top">  <!--边框阴影效果-->
+					<ul class="goods_center_title">
+						<a href="###"><li id="color_on">商品详情</li></a>
+					<!--	<a href="###"><li>售后服务</li></a>
+						<a href="###"><li>购买须知</li></a>
+						<a href="###"><dt>加入购物车</dt></a>-->
+						<a href="###"><li>加入购物车</li></a>
+					</ul>
+					
+					<!--商品详情界面开始-->
+					<div class="goods_details_start">
+						
+					<div class="goods_details_text">
+						<h3>商品参数</h3>
+						<ul>
+							<li>产地：广州</li>
+							<li>颜色：宝石蓝</li>
+							<li>材质：合金</li>
+							<li>尺寸：19长*9.5高*3厚CM</li>
+							<li>款式说明：竖款</li>
+							<li>适合人群：男士</li>
+							<li>品牌名称：爱睿希</li>
+						</ul>
+					</div>
+					<!-- 
+					<div class="goods_details_brand">
+						<h3>品牌故事</h3>
+						<figure>
+							<img src="images/goods_details_brand1.jpg">
+							<figcaption>
+								<h1>BURREM</h1>
+								<p>北京时间3月16日，据美媒体报道，在季后赛无望以及出于锻炼年轻球员的考虑，
+									湖人队已经决定在常规赛余下的时间内不让去年夏天的两位重要引援鲁尔-邓和莫兹戈夫出场，即使他俩并没有伤病。
+									去年夏天的自由球员市场上，湖人队为邓和莫兹戈夫提供了四年总价1.36亿美元的合同。但是本赛季，他俩在湖人队的表现都没有达到预期，
+									莫兹戈夫场均21分钟得到7.4分和4.9个篮板，邓场均27分钟得到7.6分和5.3个篮板。
+								</p>
+							</figcaption>
+						</figure>
+					</div> -->
+					
+					<div class="goods_details_image">
+						<h3>商品详情</h3>
+						<p>
+							<img src="images/goods_details_image1.jpg">
+							<img src="images/goods_details_image2.jpg">
+							<img src="images/goods_details_image3.jpg">
+							<img src="images/goods_details_image4.jpg">
+						</p>
+					</div>
+					</div>
+					</div>
+					<!--商品详情界面结束-->
+					
+					<div class="goods_details_bottom">
+						<p class="comments_title">商品评价(500)<p>
+						<div class="comments_main">
+							<div>
+								<a href="javaScript:void(0)"><span>全部（500）</span></a><a href ="javaScript:void(0)"><span>有图（200）</span></a>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<div id="Eva">
+							<ul class="comments_review">
+								<li>
+									<dd>
+										<img src="images/comments_review1.jpg">
+										<p>1***1</p>
+									</dd>
+									<dt>
+										<p class="comment_time">
+											<img src="images/comment.png">
+											<span class="color_red">5星</span>
+											<span class="f_right">2017/3/16 08:12:09</span>
+										</p>
+										<p class="comment_text">
+											很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错
+										</p>
+										<p class="comment_img">
+											<img src="images/goods_details_image1.jpg">
+											<img src="images/goods_details_image1.jpg">
+											<img src="images/goods_details_image1.jpg">
+											<img src="images/goods_details_image1.jpg">
+										</p>
+										<p>
+											<span class="f_left">sdfsdfsdfsdfsdfsafas</span>
+											<span class="f_right like_move"><a href="javaScript:void(0)"><i class="like_button"></i></a>(1)</span>
+										</p>
+									</dt>
+								</li>
+								
+								<li>
+									<dd>
+										<img src="images/comments_review1.jpg">
+										<p>1***1</p>
+									</dd>
+									<dt>
+										<p class="comment_time">
+											<img src="images/comment.png">
+											<span class="color_red">5星</span>
+											<span class="f_right">2017/3/16 08:12:09</span>
+										</p>
+										<p class="comment_text">
+											很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错很不错
+										</p>
+										<p class="comment_img">
+											<img src="images/goods_details_image1.jpg">
+											<img src="images/goods_details_image1.jpg">
+											<img src="images/goods_details_image1.jpg">
+											<img src="images/goods_details_image1.jpg">
+										</p>
+										<p>
+											<span class="f_left">sdfsdfsdfsdfsdfsafas</span>
+											<span class="f_right like_move"><a href="###"><i class="like_button"></i></a>(1)</span>
+										</p>
+									</dt>
+								</li>
+								<div class="clearfix"></div>
+							</ul>
+							<div class="paging_down"> 
+									<form>
+									<a href="###">上一页</a>
+									<a href="###">1</a>
+									<a href="###">2</a>
+									<a href="###">3</a>
+									<span>...</span>
+									<a href="###">14</a>
+									<a href="###">下一页</a>
+									共14页,到第<input type="text" class="paging_down_text" />页
+									<input type="submit" name="Submit" value="确定" class="paging_down_submit"/>
+									</form>
+							 </div> 
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			
+		</div>
+		
+		
+		
+		</div>
+	</div>
+	
+		
+		
+		
+	<!--清理浮动-->
+			<div class="clearfix"></div>	
+			<!--底部-->
+		<footer>
+				<div class="footer_top">
+						<ol>
+							<h4>新手指南</h4>
+							<li><a href="###">注册新用户</a></li>
+							<li><a href="###">网上订购流程</a></li>
+							<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>付款方式</h4>
+							<li><a href="###">在线支付</a></li>
+							<!--<li>网上订购流程</li>
+							<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>物流配送</h4>
+							<li><a href="###">快递配送</a></li>
+							<li><a href="###">到店自提</a></li>
+							<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>售后服务</h4>
+							<li><a href="###">退货说明</a></li>
+							<li><a href="###">如何办理退款</a></li>
+							<li><a href="###">售后服务保养手册</a></li>
+							<!--<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+				</div>
+				<!--清理浮动-->
+				<div class="clearfix"></div>	
+			
+				<div class="footer_center">
+					<ol class="range">
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品证</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+					</ol>
+				</div>
+				
+				<!--清理浮动-->
+				<div class="clearfix"></div>	
+				
+				<div class="footer_bottom range">
+					<ol>
+						<li>
+							<a href="###">秋露网</a>
+						</li>
+						<li>
+							<a href="###">秋露招商</a>
+						</li>
+					</ol>
+					<!--清理浮动-->
+				<div class="clearfix"></div>	
+					<ol>
+						<li>
+							统一社会信用代码：91110102689248179K
+						</li>
+						<li>
+							<a href="###">
+								<figure>
+									<img src="images/footerbottom.jpg">
+									<figcaption>京公安备11010102001392</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li>
+							京ICP证110119号 京ICP备09084709号-3
+						</li>
+						<li>
+							ISO9001中国质量管理体系认证
+						</li>
+					</ol>
+					<!--清理浮动-->
+					<div class="clearfix"></div>
+					<ol>
+						<li><a href="###">加入秋露</a></li>
+						<li><a href="###">联系我们</a></li>
+						<li><a href="###">关于我们</a></li>
+						<li><a href="###">帮助我们</a></li>
+						<li><a href="###">友情链接</a></li>
+					</ol>
+					<!--清理浮动-->
+					<div class="clearfix"></div>
+					<ol>
+						<li>COPYRIGHT © 2010-2016 秋露贸易有限公司 版权所有</li>
+					</ol>
+				<p>
+				<figure class="footer_code">
+				<img src="images/code.png">
+				<figcaption>扫描进入秋露微信商城</figcaption>
+				</figure>
+				</p>
+				</div>
+				
+		</footer>
+		
+		<!--商品轮播图JS-->
+		<script>
+	$(".small_pic li").mouseover(function(){
+		$(this).siblings().removeClass("on");
+		$(this).addClass("on");
+		var preNumber=$(this).prevAll().size()+1;
+		$(".big_pic li").removeClass("on");
+		$(".big_pic li:nth-child("+preNumber+")").addClass("on");
+	});
+</script>
+<script type="text/javascript" src="js/goods_details.js"></script> 
+<script src='js/goods_details.sku.js'></script>
+<script type="text/javascript" src="js/goods_details.buy.js"></script>
+<script src="js/magnifier/zzsc.js"></script>
+	</body>
+</html>

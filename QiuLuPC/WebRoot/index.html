@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>秋露商城</title>
+		<meta	content="width=device-width, minimum-scale=1.0,initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"
+			id="viewport" name="viewport" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+			
+			<link rel="stylesheet" type="text/css" href="css/base.css" />
+			<link rel="stylesheet" type="text/css" href="css/index.css" />
+			
+			<!--轮播图引用-->
+			<link type="text/css" href="css/style.css" rel="stylesheet"/>
+			
+			<link rel="stylesheet" type="text/css" href="css/animate.css" />
+			<link rel="stylesheet" type="text/css" href="css/flavr.css" />
+			<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+			<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+			<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+			<script type="text/javascript" src="js/base.js"></script>
+			<script type="text/javascript" src="js/user/personal/images_path.js"></script>
+			<script type="text/javascript"  src="js/index.js"></script>
+			<script type="text/javascript" src="js/flavr.min.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				
+				var colors = ['#F6F6F6','#55313D','#FEFCFD','#39435E','#2687B4'];
+				function changeColor(i){
+					t= i-1
+					var color = colors[t]
+					document.getElementById('backdrop').style.background=color;
+				}
+				
+				$(".main_visual").hover(function(){
+					$("#btn_prev,#btn_next").fadeIn()
+				},function(){
+					$("#btn_prev,#btn_next").fadeOut()
+				});
+				
+				$dragBln = false;
+				
+				$(".main_image").touchSlider({
+					flexible : true,
+					speed : 200,
+					btn_prev : $("#btn_prev"),
+					btn_next : $("#btn_next"),
+					paging : $(".flicking_con a"),
+					counter : function (e){
+						$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+						changeColor(e.current)
+					}
+				});
+				
+				$(".main_image").bind("mousedown", function() {
+					$dragBln = false;
+				});
+				
+				$(".main_image").bind("dragstart", function() {
+					$dragBln = true;
+				});
+				
+				$(".main_image a").click(function(){
+					if($dragBln) {
+						return false;
+					}
+				});
+				
+				timer = setInterval(function(){
+					$("#btn_next").click();
+				}, 5000);
+				
+				$(".main_visual").hover(function(){
+					clearInterval(timer);
+				},function(){
+					timer = setInterval(function(){
+						$("#btn_next").click();
+					},5000);
+				});
+				
+				$(".main_image").bind("touchstart",function(){
+					clearInterval(timer);
+				}).bind("touchend", function(){
+					timer = setInterval(function(){
+						$("#btn_next").click();
+					}, 5000);
+				});
+				
+			});
+			</script>
+
+			<script>
+				$(function(){
+				    $("#main li").hover(function(){
+				     var position=$(this).position();
+				        var mainHeight=$(this).parent().height();
+				        var firstHeight=$(".detail").height(); 
+				        if(mainHeight-position.top>=firstHeight){
+				            $(".detail").css({top:position.top-2});
+				        }
+				        else{
+				            $(".detail").css({top:mainHeight-firstHeight-2});
+				        }
+				    });
+				});
+			</script>
+			
+	</head>
+	<body>
+		<!--头部-->
+		<header class="range">
+			<h1>秋露商城</h1>
+			<div class="logo">
+				<img src="images/logo.png"/>
+			</div>
+			<ul class="list">
+				<li>欢迎光临秋露商城</li>
+				<li><a href="login.html" >请登录</a></li>
+				<li><a href="register.html" >免费注册</a></li>
+				<li><a href="###" >我的订单</a></li>
+				<li><a href="###" >服务中心</a></li>
+				<li><a href="user/cart.html" ><!--<img src="images/shoppingcart.png">-->购物车(0)</a></li>
+			</ul>
+			
+			<div class="search">
+				<form onsubmit="return false;">
+					<input id="search" type="text" placeholder="    空气净化器">
+					<button id="subButton" type="button" onclick="getSellPoint()">搜索</button>
+				</form>
+				<ul>
+					<li><a href="###">黑加仑葡萄干</a></li>
+					<li><a href="###">倍净空气净化器</a></li>
+					<li><a href="###">卓霏护肤系列</a></li>
+					<li><a href="###">睿康营养液</a></li>
+					<li><a href="###">真丝羽绒被</a></li>
+				</ul>
+			</div>
+			
+			<div class="header_nav">
+				<p>全部商品</p>
+				<ul>
+					<a href="index.html"><li>首页</li></a>
+					<a href="onnew.html"><li>上新</li></a>
+					<a href="###"><li>品牌</li></a>
+					<a href="privilege.html"><li>活动</li></a>
+					<a href="###"><li>会员专区</li></a>
+					<a href="###"><li>创客</li></a>
+					<a href="###"><li>关于我们</li></a>
+				</ul>
+			</div>
+			
+		</header>
+		
+		<!--分类列表-->
+		<div class="nav">
+			<div class="range">
+			<ol class="classification"  id="main">
+				<li>
+					<a href="###"><dd>床上用品</dd></a>
+					<a href="###"><dt>真丝羽绒被</dt></a>
+					<a href="###"><dt>羽绒冬被</dt></a>
+					<section class="detail">
+					<div>
+					<h6>分类</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>品牌</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>热词</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					</div>
+					</section>
+				</li>
+				<li>
+					<a href="###"><dd>服装类</dd></a>
+					<a href="###"><dt>围巾</dt></a>
+					<!--<a href="###"><dt>古驰</dt></a>
+					<a href="###"><dt>普拉达</dt></a>-->
+					<section class="detail">
+					<div>
+					<h6>分类</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>品牌</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>热词</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					</div>
+					</section>
+				</li>
+				<li>
+					<a href="###"><dd>土特产</dd></a>
+					<a href="###"><dt>果干</dt></a>
+					<a href="###"><dt>坚果</dt></a>
+					<a href="###"><dt>大礼包</dt></a>
+					<section class="detail">
+					<div>
+					<h6>分类</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>品牌</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>热词</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					</div>
+					</section>
+				</li>
+				<li>
+					<a href="###"><dd>直购</dd></a>
+					<a href="###"><dt>睿活护理系列</dt></a>
+					<a href="###"><dt>精油</dt></a>
+					<!--<a href="###"><dt>大礼包</dt></a>-->
+					<section class="detail">
+					<div>
+					<h6>分类</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>品牌</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>热词</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					</div>
+					</section>
+				</li>
+				<li>
+					<a href="###"><dd>空气净化器</dd></a>
+					<!--<a href="###"><dt>果干</dt></a>
+					<a href="###"><dt>坚果</dt></a>
+					<a href="###"><dt>大礼包</dt></a>-->
+					<section class="detail">
+					<div>
+					<h6>分类</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>品牌</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>热词</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					</div>
+					</section>
+				</li>
+				<li>
+					<a href="###"><dd>护肤品</dd></a>
+					<!--<a href="###"><dt>果干</dt></a>
+					<a href="###"><dt>坚果</dt></a>
+					<a href="###"><dt>大礼包</dt></a>-->
+					<section class="detail">
+					<div>
+					<h6>分类</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>品牌</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>热词</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					</div>
+					</section>
+				</li>
+				<li>
+					<a href="###"><dd>营养素</dd></a>
+					<!--<a href="###"><dt>果干</dt></a>
+					<a href="###"><dt>坚果</dt></a>
+					<a href="###"><dt>大礼包</dt></a>-->
+					<section class="detail">
+					<div>
+					<h6>分类</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>品牌</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>热词</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					</div>
+					</section>
+				</li>
+				<li>
+					<a href="###"><dd>营养素</dd></a>
+					<!--<a href="###"><dt>果干</dt></a>
+					<a href="###"><dt>坚果</dt></a>
+					<a href="###"><dt>大礼包</dt></a>-->
+					<section class="detail">
+					<div>
+					<h6>分类</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>品牌</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼ssss包</span></a>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					</div>
+					<div>
+					<h6>热词</h6>
+					<a href="###"><span>果干</span></a>
+					<a href="###"><span>坚果sssss</span></a>
+					<a href="###"><span>大礼sss包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					<a href="###"><span>大礼包</span></a>
+					<a href="###"><span>果干ssss</span></a>
+					<a href="###"><span>坚果</span></a>
+					</div>
+					</section>
+				</li>
+			</ol>
+			
+			<!--轮播图-->
+		<div class="main_visual"   >
+			<div class="flicking_con">
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+			</div>
+			<div class="main_image">
+				<ul>
+					<li><span class="img_3"></span></li>
+					<li><span class="img_4"></span></li>
+					<li><span class="img_1"></span></li>
+					<li><span class="img_2"></span></li>
+					<li><span class="img_5"></span></li>
+				</ul>
+				<a href="javascript:;" id="btn_prev"></a>
+				<a href="javascript:;" id="btn_next"></a>
+			</div>
+		</div>
+			<!--main_visual end-->
+		</div>
+		<!--轮播图背景-->
+			<div class="visual_backgroud" id="backdrop">
+				
+			</div>
+		<!--插图-->
+		<div class="illustration range">
+			<a href="###"><figure class="illustration_one">
+				<img src="images/index_image1.jpg">
+				<figcaption>
+					CHANEL <p>2799元起</p>
+				</figcaption>
+				<i class="light"></i>
+			</figure></a>
+			<a href="###"><figure class="illustration_two">
+				<img src="images/index_image2.jpg">
+				<figcaption>
+					波西塔诺 <p>2528元起</p>
+				</figcaption>
+			</figure></a>
+			<a href="###"><figure class="illustration_three">
+				<img src="images/index_image3.jpg">
+				<figcaption>
+					CHANEL <p>2799元起</p>
+				</figcaption>
+			</figure></a>
+		</div>
+		
+		<!--上新-->
+		<section class="onnew range">
+			<!--标题-->
+			<div  class="title">
+	       <h2>
+				上新
+			<div>今日上新：2单</div>
+			</h2>
+			<a href="###"><h4>更多商品&gt;</h4></a>
+			</div>
+			<table width="1200" border="1" class="onnewtable">
+				  <tr>
+				    <td width="480" height="330" rowspan="2" scope="col">
+				    	<a href="###">
+				    		<figure class="onnew_left">
+								<img src="images/onnewpic1.png">
+								<figcaption>
+									<span>CHANEL <p>2799元起</p></span>
+								</figcaption>
+							</figure>
+				    	</a>
+				    </td>
+				    <td width="240" rowspan="2" scope="col">
+				    	<a href="###">
+				    		<figure class="onnew_center">
+								<img src="images/onnewpic2.png">
+								<figcaption>
+									<span>CHANEL <p>2799元起</p></span>
+								</figcaption>
+							</figure>
+				    	</a>
+				    </td>
+				    <td width="240" height="165" scope="col">
+				    	<a href="###">
+				    		<figure class="onnew_right">
+								<img src="images/onnewpic3.png">
+								<figcaption>
+									<span>CHANEL <p>2799元起</p></span>
+								</figcaption>
+							</figure>
+				    	</a>
+				    </td>
+				    <td width="240" scope="col">
+				    	<a href="###">
+				    		<figure class="onnew_right">
+								<img src="images/onnewpic3.png">
+								<figcaption>
+									<span>CHANEL <p>2799元起</p></span>
+								</figcaption>
+							</figure>
+				    	</a>
+				    </td>
+				  </tr>
+				  <tr>
+				    <td width="240" height="165">
+				    	<a href="###">
+				    		<figure class="onnew_right">
+								<img src="images/onnewpic3.png">
+								<figcaption>
+									<span>CHANEL <p>2799元起</p></span>
+								</figcaption>
+							</figure>
+				    	</a>
+				    </td>
+				    <td>
+				    	<a href="###">
+				    		<figure class="onnew_right">
+								<img src="images/onnewpic3.png">
+								<figcaption>
+									<span>CHANEL <p>2799元起</p></span>
+								</figcaption>
+							</figure>
+				    	</a>				    
+				    </td>
+				  </tr>
+			</table>
+			
+			</div>
+		</section>
+		
+		<!--清理浮动-->
+		<div class="clearfix"></div>
+		
+		<!--品牌-->
+		<section class="brand range">
+			<div  class="title">
+				<h2>
+				品牌
+				<div>原装正品</div>
+				</h2>
+				<a href="###"><h4>更多商品&gt;</h4></a>
+			</div>
+			<!--清理浮动-->
+			<div class="clearfix"></div>
+			
+				<a href="###">
+		    		<figure class="brand_left">
+						<img src="images/brandpic1.png">
+						<figcaption>
+							<span>CHANEL <p>2799元起</p></span>
+						</figcaption>
+					</figure>
+				</a>
+				
+				<a href="###">
+		    		<figure class="brand_left brand_right">
+						<img src="images/brandpic2.png">
+						<figcaption>
+							<span>CHANEL <p>2799元起</p></span>
+						</figcaption>
+					</figure>
+				</a>
+				<!--清理浮动-->
+			<div class="clearfix"></div>
+			
+		<div class="illustration">
+			<a href="###"><figure>
+				<img src="images/index_image1.png">
+				<figcaption>
+					CHANEL <p>2799元起</p>
+				</figcaption>
+			</figure></a>
+			<a href="###"><figure>
+				<img src="images/index_image1.png">
+				<figcaption>
+					CHANEL <p>2799元起</p>
+				</figcaption>
+			</figure></a>
+			<a href="###"><figure>
+				<img src="images/index_image1.png">
+				<figcaption>
+					CHANEL <p>2799元起</p>
+				</figcaption>
+			</figure></a>
+		</div>
+			</div>
+		</section>
+		
+		<!--清理浮动-->
+		<div class="clearfix"></div>
+		
+		<!--优惠活动-->
+		<section class="discount range">
+			<div  class="title">
+				<h2>
+				活动
+				<div>优惠活动</div>
+				</h2>
+				<a href="###"><h4>更多商品&gt;</h4></a>
+			</div>
+			<!--清理浮动-->
+			<div class="clearfix"></div>
+			
+			<a href="###">
+		    		<figure class="discount_left">
+						<img src="images/discountpic1.png">
+						<figcaption>
+							<span>CHANEL <strong>3000元</strong><p>2799元起</p></span>
+						</figcaption>
+					</figure>
+				</a>
+				
+				<a href="###">
+		    		<figure class="discount_top">
+						<img src="images/discountpic2.png">
+						<figcaption>
+							<span>CHANEL <p>2799元起</p></span>
+						</figcaption>
+					</figure>
+				</a>
+				
+				<a href="###">
+		    		<figure class="discount_top discount_bottom">
+						<img src="images/discountpic3.png">
+						<figcaption>
+							<span>CHANEL <p>2799元起</p></span>
+						</figcaption>
+					</figure>
+				</a>
+				
+				
+					<div  class="discount_right">
+		    		<figure class="discount_right_top">
+						<img src="images/discountpic5.jpg">
+						<figcaption>
+							<span>CHANEL <p>2799元起</p></span>
+						</figcaption>
+					</figure>
+					
+					<figure class="discount_right_top">
+						<img src="images/discountpic6.jpg">
+						<figcaption>
+							<span>CHANEL23333333333 <p>2799元起23123123123</p></span>
+						</figcaption>
+					</figure>
+					</div>
+			</section>
+			<!--清理浮动-->
+			<div class="clearfix"></div>	
+			<!--底部-->
+		<footer>
+				<div class="footer_top">
+						<ol>
+							<h4>新手指南</h4>
+							<li><a href="###">注册新用户</a></li>
+							<li><a href="###">网上订购流程</a></li>
+							<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>付款方式</h4>
+							<li><a href="###">在线支付</a></li>
+							<!--<li>网上订购流程</li>
+							<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>物流配送</h4>
+							<li><a href="###">快递配送</a></li>
+							<li><a href="###">到店自提</a></li>
+							<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>售后服务</h4>
+							<li><a href="###">退货说明</a></li>
+							<li><a href="###">如何办理退款</a></li>
+							<li><a href="###">售后服务保养手册</a></li>
+							<!--<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+				</div>
+				<!--清理浮动-->
+				<div class="clearfix"></div>	
+			
+				<div class="footer_center">
+					<ol class="range">
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品证</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+					</ol>
+				</div>
+				
+				<!--清理浮动-->
+				<div class="clearfix"></div>	
+				
+				<div class="footer_bottom range">
+					<ol>
+						<li>
+							<a href="###">秋露网</a>
+						</li>
+						<li>
+							<a href="###">秋露招商</a>
+						</li>
+					</ol>
+					<!--清理浮动-->
+				<div class="clearfix"></div>	
+					<ol>
+						<li>
+							统一社会信用代码：91110102689248179K
+						</li>
+						<li>
+							<a href="###">
+								<figure>
+									<img src="images/footerbottom.jpg">
+									<figcaption>京公安备11010102001392</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li>
+							京ICP证110119号 京ICP备09084709号-3
+						</li>
+						<li>
+							ISO9001中国质量管理体系认证
+						</li>
+					</ol>
+					<!--清理浮动-->
+					<div class="clearfix"></div>
+					<ol>
+						<li><a href="###">加入秋露</a></li>
+						<li><a href="###">联系我们</a></li>
+						<li><a href="###">关于我们</a></li>
+						<li><a href="###">帮助我们</a></li>
+						<li><a href="###">友情链接</a></li>
+					</ol>
+					<!--清理浮动-->
+					<div class="clearfix"></div>
+					<ol>
+						<li>COPYRIGHT © 2010-2016 秋露贸易有限公司 版权所有</li>
+					</ol>
+				<p>
+				<figure class="footer_code">
+				<img src="images/code.png">
+				<figcaption>扫描进入秋露微信商城</figcaption>
+				</figure>
+				</p>
+				</div>
+				
+		</footer>
+		
+	</body>
+</html>

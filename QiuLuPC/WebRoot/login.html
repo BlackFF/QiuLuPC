@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>秋露商城登录</title>
+		<meta	content="width=device-width, minimum-scale=1.0,initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"
+			id="viewport" name="viewport" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+			<link rel="stylesheet" type="text/css" href="css/base.css" />
+			<link rel="stylesheet" type="text/css" href="css/login.css" />
+			<link rel="stylesheet" type="text/css" href="css/animate.css" />
+			<link rel="stylesheet" type="text/css" href="css/flavr.css" />
+			<link rel="stylesheet" type="text/css" href="css/register.css" />
+			<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+			<script type="text/javascript" src="js/cookie_util.js"></script>
+			<script type="text/javascript" src="js/md5.js"></script>
+			<script type="text/javascript" src="js/login.js"></script>
+			<script type="text/javascript" src="js/base.js"></script>
+			<script type="text/javascript" src="js/flavr.min.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<div>
+				<img src="images/logo.png">
+				<ul>
+					<a href="index.html"><li>秋露首页</li></a>
+					<a href="javascript:addFavorite();"><li>收藏秋露</li></a>
+				</ul>
+			</div>
+		</header>
+		<!--清理浮动-->
+		<div class="clearfix"></div>
+		
+		<nav class="nav">
+			<div class="nav_register range">
+				<div class="nav_right">
+					<h1>欢迎登录</h1>
+					<div class="nav_user">
+						<form>
+							<ul >
+								<li class="user_wrong" id="wrong"><span id="mess"></span>用户名或密码错误</li>
+								<li class="user_text">
+										<input type="text" name="" placeholder="用户名" id="name"/>
+										<dd></dd>	
+								</li>
+								<li class="user_pass user_text">
+									<input type="password" name="" placeholder="请输入密码" id="pwd"/>
+									<dt></dt>
+								</li>
+								<li class="auth_code">
+									<input type="text" name="" placeholder="验证码"  id="Code"/><span  style="color:red; height:42px; line-height:42px; margin-left:5px;" id="message"></span><a href="###"><img src="User/img" onclick="this.setAttribute('src','User/img?x='+Math.random());" style="cursor:pointer;" alt="验证码" title="点击更换" /></a>
+								</li>
+								<!--清理浮动-->
+								<div class="clearfix"></div>
+								
+								<li class="user_check">
+									<input type="checkbox" name="" onclick="setCook()"/> <span>记住账号</span>
+								</li>
+								
+								<!--清理浮动-->
+								<div class="clearfix"></div>
+								<li class="user_submit">
+									<input type="button" name="" value="立即登录" id="sub" onclick="loginAction()"/>
+								</li>
+								<li class="user_mfzc">
+									<a href="register.html"><dd>免费注册</dd></a>
+									<a href="retrieve_pwd.html"><dt>忘记密码？</dt></a>
+								</li>
+								
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+			<!--底部-->
+		<footer>
+				<div class="footer_top">
+						<ol>
+							<h4>新手指南</h4>
+							<li><a href="###">注册新用户</a></li>
+							<li><a href="###">网上订购流程</a></li>
+							<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>付款方式</h4>
+							<li><a href="###">在线支付</a></li>
+							<!--<li>网上订购流程</li>
+							<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>物流配送</h4>
+							<li><a href="###">快递配送</a></li>
+							<li><a href="###">到店自提</a></li>
+							<!--<li>优惠劵使用说明</li>
+							<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+						<ol>
+							<h4>售后服务</h4>
+							<li><a href="###">退货说明</a></li>
+							<li><a href="###">如何办理退款</a></li>
+							<li><a href="###">售后服务保养手册</a></li>
+							<!--<li>注册新用户</li>
+							<li>注册新用户</li>-->
+						</ol>
+				</div>
+				<!--清理浮动-->
+				<div class="clearfix"></div>	
+			
+				<div class="footer_center">
+					<ol class="range">
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品证</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img src="images/footer2.png">
+								<figcaption>100%保证真品</figcaption>
+							</figure>
+						</li>
+					</ol>
+				</div>
+				
+				<!--清理浮动-->
+				<div class="clearfix"></div>	
+				
+				<div class="footer_bottom range">
+					<ol>
+						<li>
+							<a href="###">秋露网</a>
+						</li>
+						<li>
+							<a href="###">秋露招商</a>
+						</li>
+					</ol>
+					<!--清理浮动-->
+				<div class="clearfix"></div>	
+					<ol>
+						<li>
+							统一社会信用代码：91110102689248179K
+						</li>
+						<li>
+							<a href="###">
+								<figure>
+									<img src="images/footerbottom.jpg">
+									<figcaption>京公安备11010102001392</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li>
+							京ICP证110119号 京ICP备09084709号-3
+						</li>
+						<li>
+							ISO9001中国质量管理体系认证
+						</li>
+					</ol>
+					<!--清理浮动-->
+					<div class="clearfix"></div>
+					<ol>
+						<li><a href="###">加入秋露</a></li>
+						<li><a href="###">联系我们</a></li>
+						<li><a href="###">关于我们</a></li>
+						<li><a href="###">帮助我们</a></li>
+						<li><a href="###">友情链接</a></li>
+					</ol>
+					<!--清理浮动-->
+					<div class="clearfix"></div>
+					<ol>
+						<li>COPYRIGHT © 2010-2016 秋露贸易有限公司 版权所有</li>
+					</ol>
+				<p>
+				<figure class="footer_code">
+				<img src="images/code.png">
+				<figcaption>扫描进入秋露微信商城</figcaption>
+				</figure>
+				</p>
+				</div>
+				
+		</footer>
+		
+		
+	</body>
+</html>

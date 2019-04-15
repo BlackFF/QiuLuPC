@@ -1,0 +1,152 @@
+.main_va {
+	padding: 20px;
+	float: left;
+}
+
+.main_va h4 {
+	height: 40px;
+	line-height: 40px;
+	width: 930px;
+	background: #F5F5F5;
+	color: #333;
+	padding-left: 20px;
+	box-sizing:border-box ;
+}
+.main_submenu,.main_submenu_two,.main_submenu_three {
+	width: 930px;
+	padding: 50px;
+	border: 1px solid #eee;
+	float: left;
+	box-sizing:border-box ;
+}
+.main_sub_top {
+	margin-left: 200px;
+	float: left;
+}
+.main_sub_top li {
+	float: left;
+	text-align: center;
+	line-height: 200%;
+}
+.main_sub_top li p {
+	color: #333;
+	font-size: 14px;
+}
+.bg_show {
+	width:130px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	float: left;
+	display: inline-block;
+	background:url(../../images/icons.png)  -8px -277px  no-repeat;
+	color: #fff;
+	font-size: 14px;
+}
+.bg_no {
+	width:130px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	float: left;
+	display: inline-block;
+	background:url(../../images/icons.png)  -152px -277px  no-repeat;
+	color: #fff;
+	font-size: 14px;
+}
+.va_menu {
+	margin-top: 60px;
+	color: #333;
+}
+.va_tele_style {
+	width: 150px;
+	height: 30px;
+}
+.va_tele {
+	font-size: 22px;
+	color: #000;
+}
+.fill_phone_code {
+	position: relative;
+}
+.fill_phone_code p {
+	position: absolute;
+	top: 48px;
+	left: 0;
+}
+.fill_phone_code input {
+	width: 240px;
+	height: 30px;
+	border: 1px solid #ddd;
+	float: left;
+}
+
+.fill_phone_code img{
+	float:left;
+	margin-left:10px;
+}
+.fill_phone_code span {
+	width: 110px;
+	height: 28px;
+	line-height: 28px;
+	border: 2px solid #ddd;
+	display: block;
+	text-align: center;
+	float: left;
+	margin-left: 20px;
+	color: #333;
+}
+.fill_phone_code sp {
+	width: 110px;
+	height: 28px;
+	line-height: 28px;
+	display: block;
+	float: left;
+	margin-left: 20px;
+	color: #333;
+}
+.fill_phone_code span:hover {
+	color: #E93B39;
+	border: 2px solid #E93B39;
+}
+.fill_code input {
+	width: 240px;
+	height: 30px;
+	border: 1px solid #ddd;
+	float: left;
+}
+.fill_code img {
+	margin-left: 20px;
+}
+.va_submit input {
+	margin-left:300px;
+	height: 30px;
+	line-height: 30px;
+	width: 130px;
+	text-align: center;
+	background:#E93B39;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+}
+.va_succeed {
+	margin-top: 30px;
+}
+.va_succeed p {
+	font-size: 23px;
+	color: #7F69B3;
+	margin-left:200px ;
+}
+.va_succeed div {
+	margin-left:300px;
+	margin-top:20px;
+	height: 30px;
+	line-height: 30px;
+	width: 130px;
+	text-align: center;
+	background:#E93B39;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+}
+
